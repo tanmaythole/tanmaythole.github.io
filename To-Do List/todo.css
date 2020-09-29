@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #b1b0b0;
+}
+.container{
+    display: block;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: -2px 7px 7px 0 black;
+    background: #706868;
+    width: 350px;
+    height: 80%;
+    margin: 0 auto;
+    top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.box{
+    padding: 30px 15px;
+    height: 400px;
+    
+}
+.title{
+    padding: 20px;
+    text-align: center;
+    color: rgba(28, 17, 187, 0.541);
+}
+.title span{
+    color: rgb(19, 223, 12);;
+}
+
+input{
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    width: 60%;
+    color: #fff;
+    height: 20px;
+    margin: 0 5px 0 20px;
+    padding: 2px 5px;
+    font-size: 15px;
+    outline: none;
+}
+input::placeholder{
+    color: #a8a4a4;
+}
+button{
+    width: 20%;
+    height: 25px;
+    border: none;
+    background: rgb(89, 53, 219);
+    color: rgb(190, 188, 188);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.list{
+    width: 80%;
+    margin: auto;
+    margin-top: 35px;
+    height: 70%;
+    overflow-y: scroll;
+}
+.list::-webkit-scrollbar{
+    appearance: none;
+}
+.element{
+    position: relative;
+    width: 80%;
+    right: 0;
+    margin: 5px 0;
+    transition:0.2s;
+    padding: 5px 10px;
+    text-align: left;
+    background: rgb(184, 161, 161);
+    border-radius: 2px;
+    border: 1px solid rgb(158, 158, 158);
+}
+.element:hover{
+    transform: scale(1.1);
+}
+.dele{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 0;
+    padding-left: 5px;
+    right: 10px;
+    color: red;
+    margin: auto;
+    text-align: right;
+    
+}
+i{
+    cursor: pointer;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+}
+footer p{
+    padding: 2px;
+}
+footer a{
+    text-decoration: none;
+}
