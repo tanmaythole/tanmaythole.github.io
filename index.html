@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1><i class="fa fa-book" aria-hidden="true"></i> My<span>Book</span>List</h1>
+        </div>
+        
+        <form id="form">
+            <input type="text" id="name" placeholder="Title">
+            <input type="text" id="author" placeholder="Author">
+            <input type="number" id="isbn" placeholder="ISBN">
+            <input type="submit" id="submit" value="Add Book">
+        </form>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th></th>
+                    </tr>
+                    
+                </thead>
+                <tbody id="book-list">
+                    
+                </tbody>
+           </table>
+        </div>
+    </div>
+    <script>
+        var form=document.getElementById("form");
+        var names=document.getElementById("name");
+        var author=document.getElementById("author");
+        var isbn=document.getElementById("isbn");
+        var booklist=document.getElementById("book-list");
+        var books=[];
+
+        window.onload=function(){
+            if(JSON.parse(localStorage.getItem("booklist"))!=null){
+                books=JSON.parse(localStorage.getItem("booklist"));
+                display();
+            }
+        }
+
+        form.addEventListener("submit", add);
+        //booklist.addEventListener('click', removeBook);
+        function add(e){
+            e.preventDefault();
+            if(names.value==="" || author==="" || isbn.value===""){
+                showAlert('error',"Enter All Fields...");
+            }else{
+                
+                books.push({name:names.value,author:author.value,isbn:isbn.value});
+                /*if(localStorage.getItem("booklist")===null){
+                    localStorage.setItem("booklist",JSON.stringify(books));
+                }
+                else{
+                    localStorage.setItem("booklist",JSON.stringify(books));
+                }*/
+                localStorage.setItem("booklist",JSON.stringify(books));
+                display();
+                showAlert('success',"Book Added");
+                names.value="";
+                author.value="";
+                isbn.value="";
+            }
+        }
+        function display(){
+            booklist.innerHTML="";
+            for(var i=0;i<books.length;i++){
+                booklist.innerHTML+="<tr><td>"+books[i].name+"</td><td>"+books[i].author+"</td><td>"+books[i].isbn+"</td><td><i class='fa fa-trash delete' onclick='del("+i+")'></i></td></tr>";
+            }
+            
+        }
+        
+        function del(index){
+            books.splice(index,1);
+            if(localStorage.getItem("booklist")===null){
+                    localStorage.setItem("booklist",JSON.stringify(books));
+                }
+                else{
+                    localStorage.setItem("booklist",JSON.stringify(books));
+                }
+            display();
+            showAlert('error',"Book Removed");
+        }
+        function showAlert(className, message){
+            const div=document.createElement("div");
+            div.className=`alert ${className}`;
+            div.appendChild(document.createTextNode(message));
+            const container=document.querySelector(".container");
+            const form=document.querySelector("#form");
+            container.insertBefore(div, form);
+            setTimeout(() => document.querySelector('.alert').remove(), 2000);
+        }
+    </script>
+</body>
+</html>
+
