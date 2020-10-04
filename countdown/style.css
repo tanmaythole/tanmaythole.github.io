@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('marina-bay-at-night-singapore-uhd-4k-wallpaper.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    padding: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+h2{
+    padding: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+h2 span{
+    color: rgb(199, 226, 46);
+}
+#form{
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+}
+label{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.row{
+    padding-bottom: 10px;
+}
+input{
+    width: 300px;
+    height: 20px;
+    padding: 5px;
+}
+.container{
+    margin-top: 20px;
+    width: 450px;
+    height: 225px;
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+    backdrop-filter: blur(15px);
+    background: #fff;
+    border-radius: 7px;
+}
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.col{
+    margin: 5px;
+    text-align: center;
+}
+.box{
+    height: 50px;
+    width: 50px;
+    background: rgb(133, 57, 57);
+    padding: 10px;
+    font-size: 45px;
+    border-radius: 5px;
+    color: aliceblue;
+}
+#form button{
+    top: 5px;
+    left: 30%;
+    width: 40%;
+    position: relative;
+    text-align: center;
+    padding: 8px;
+    background: rgb(243, 133, 59);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+.timeup h1{
+    color: red;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: black;
+    height: 65px;
+    color: #fff;
+    padding: 15px;
+}
+footer p{
+    padding: 5px;
+}
+footer a{
+    padding: 5px;
+}

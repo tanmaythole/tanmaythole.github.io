@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>CountDown</h1>
+    <div id="form">
+        <div class="row">
+            <label>Event Name : </label>
+            <input type="text" id="event" placeholder="Event Name">
+        </div>
+        <div class="row">
+            <label>Date : </label>
+            <input type="date" id="date" required>
+        </div>
+        <div class="row">
+            <label>Time : </label>
+            <input type="time" id="time" required>
+        </div>
+        <button onclick="calc()">start</button>
+    </div>
+    <div class="container" id="container">
+        <h2>Time Remaining For <span id="eventname"></span></h2>
+        <div class="clock" id="clock">
+            <div class="col">
+                <div class="box"><p id="days">00</p></div>
+                <div class="label">DAYS</div>
+            </div>
+            <div class="col">
+                <div class="box"><p id="hrs">00</p></div>
+                <div class="label">HOURS</div>
+            </div>
+            <div class="col">
+                <div class="box"><p id="mins">00</p></div>
+                <div class="label">MINUTES</div>
+            </div>
+            <div class="col">
+                <div class="box"><p id="sec">00</p></div>
+                <div class="label">SECONDS</div>
+            </div>
+        </div>
+        <div class="timeup" id="timeup">
+            <h1>Time-Up</h1>
+        </div>
+    </div>
+    <audio id="timeraudio"><source src="timer_countdown.mp3" type="audio/mpeg"></audio>
+
+    <footer>
+        <p id="copyright">&copy; 2020 <b>Tanmay Thole</b> </p>
+        <p id="social-links"><a href="https://www.instagram.com/tanmay_v_thole"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/tanmaythole45/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.twitter.com/tanmay_v_thole"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/tanmay-thole-b82978175/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
