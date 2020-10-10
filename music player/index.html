@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="contain">
+            <!--Top Icons-->
+            <div class="heading">
+                <a href=""><i class="fa fa-bars"></i></a>
+                <h2>MY MUSIC</h2>
+                <a href=""><i class="fa fa-heart"></i></a>
+            </div>
+            <!--img-->
+            <div class="img">
+                <img src="1.jpg" alt="" id="img" id="cover">
+            </div>
+
+            <!--Music Title-->
+            <div class="title">
+                <h3 id="audioTitle">Despacito</h3>
+                <p>Cool Artist - No name</p>
+            </div>
+
+            <!--time-->
+            <div class="time">
+                <p id="current">00:00</p>
+                <p id="remaining">00:00</p>
+            </div>
+
+            <!--seek bar-->
+            <div class="seek">
+                <div class="fill" id="fill"></div>
+            </div>
+
+            <!--audio buttons-->
+            <div class="audio-btns">
+                <div class="main-btns">
+                    <a href="#" onclick="previous()"><i class="fa fa-backward"></i></a>
+                    <a href="#" class="play-pause" onclick="playpause()"><i class="fa fa-play"></i></a>
+                    <a href="#" onclick="next()"><i class="fa fa-forward"></i></a>
+                </div>
+                <div class="other">
+                    <a href="#"><i class="fa fa-retweet"></i></a>
+                    <button class="decrease" onclick="decrease()">-</button>
+                    <a href="#" id="volumeup" onclick="volume()"><i class="fa fa-volume-up"></i></a>
+                    <button class="increase" onclick="increase()">+</button>
+                    <a href="#"><i class="fa fa-random"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy;2020, <b>Tanmay Thole</b></p>
+        <p><a href="https://www.instagram.com/tanmay_v_thole"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/tanmaythole45/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.twitter.com/tanmay_v_thole"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/tanmay-thole-b82978175/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
