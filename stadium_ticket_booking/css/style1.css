@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .3s;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    background:#000;
+    color: #fff;
+    position: fixed;
+    z-index: 1;
+}
+.nav-center{
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+.logo{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    
+}
+.navbar-fixed{
+    background: rgb(214, 214, 214);
+    color: #333;
+    box-shadow: 10px 0px 8px black;
+}
+.first-letter{
+    color: red;
+}
+
+/*
+====================================
+Side-Bar
+====================================
+*/
+aside{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgb(177, 177, 206);
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    transition: .5s;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); 
+    padding-top: 50px;
+}
+.show-sidebar{
+    -webkit-transform: translateX(0);
+    transform: translateX(0); 
+}
+aside button{
+    color: red;
+    font-size: 35px;
+    float: right;
+    cursor: pointer;
+    margin: 30px 30px 0 0;
+    outline: none;
+    background: none;
+    border: none;
+}
+aside ul{
+    padding-top: 100px;
+    list-style-type: none;
+    text-align: center;
+}
+aside ul li{
+    padding: 15px;
+    font-size: 26px;
+}
+aside ul a{
+    text-decoration: none;
+    color: rgb(105, 105, 207);
+}
+aside p{
+    padding: 30px;
+    text-align: center;
+    font-size: 28px;
+}
+aside p a{
+    padding: 0 20px;
+    color: rgb(100, 100, 72);
+}
+
+
+/*=======================================
+        Header
+=======================================*/
+.header{
+    background: url('../images/wallpaperflare.com_wallpaper.jpg') center center no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    height: 100vh;
+    padding-top: 80px;
+}
+.header-content{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    top: 15%;
+    color: rgb(190, 32, 32);
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-content .header-title{
+    width: 80%;
+    margin: auto;
+    backdrop-filter:blur(5px);
+    border-radius: 15px;
+}
+.header-content h1{
+    color: #fff;
+    font-size: 37px;
+}
+.header-content a button{
+    margin: 50px 0;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    color: #fff;
+    outline: none;
+    background: rgb(224, 10, 214);
+    transition: .3s all ease-in;
+}
+.header-content a button:hover{
+    transform: scale(1.05);
+    background: #fff;
+    color: rgb(224, 10, 214);
+    border-color: red;
+}
+
+/*=======================================
+            About Us
+=======================================*/
+#about{
+    background: rgb(207, 204, 204);
+    text-align: center;
+    padding: 35px;
+    font-family: 'Montserrat', sans-serif;
+}
+.aboutus{
+    width: 80%;
+    margin: auto;
+}
+.aboutus h1, .contactus h1{
+    padding: 25px;
+    text-decoration: underline;
+    font-size: 40px;
+}
+.aboutus p, .contactus p{
+    font-size: 20px;
+    padding: 11px;
+    color: #333;
+}
+.aboutus ul{
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+}
+.aboutus ul li{
+    list-style-type: none;
+    font-size: 20px;
+    text-align: left;
+}
+
+/*=======================================
+            Contact Us
+=======================================*/
+#contact{
+    padding: 35px;
+    background: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+.contactus{
+    width: 70%;
+    margin: auto;
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+}
+.contactus h2{
+    padding: 15px;
+    font-size: 30px;
+}
+.social-links{
+    margin: 25px;
+}
+.social-links a{
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid rgb(238, 78, 78);
+    border-radius: 50%;
+    color: rgb(238, 78, 78);
+}
+.social-links a:hover{
+    background: rgb(238, 78, 78);
+    color: #fff;
+}
+
+
+
+/*=======================================
+            Footer
+=======================================*/
+footer{
+    width: 100%;
+    height: 150px;
+    background: #000;
+    color: #fff;
+    
+}
+.footer-text{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+.cr-section{
+    text-align: right;
+    top: 90px;
+    position: relative;
+}
+.developer-section{
+    text-align: left;
+}
+.developer-section b{
+    color: red;
+}
+
+
+
+
+
+
+/*=======================================
+            Media Query
+=======================================*/
+
+@media screen and (min-width:864px){
+    .bars{
+        display: none;
+    }
+    .nav-header{
+        float: left;
+    }
+    .nav-menu{
+        float: right;
+    }
+    .nav-menu ul li{
+        float: left;
+        padding: 7px 20px;
+        font-size: 19px;
+        font-family: 'Monserrat', sans-serif;
+    }
+    .nav-menu ul{
+        list-style-type: none;
+    }
+    .nav-menu ul li a{
+        color: #fff;
+    }
+    .navbar-fixed .nav-menu ul li a{
+        color: #333;
+    }
+    .nav-menu ul li a:hover{
+        font-weight: bold;
+        color: red;
+    }
+}
+@media screen and (max-width:864px){
+    .nav-menu{
+        display: none;
+    }
+    .bars{
+        font-size: 28px;
+        background: transparent;
+        border: none;
+        float: right;
+        padding-top: 5px;
+        color: rgb(250, 151, 3);
+        cursor: pointer;
+        outline: none;
+    }
+    .aboutus{
+        width: 90%;
+    }
+    .aboutus ul{
+        width: 75%;
+    }
+}
+@media screen and (max-width:600px){
+    .aboutus{
+        width: 95%;
+    }
+    .aboutus ul{
+        width: 100%;
+    }
+    .contactus{
+        width: 100%;
+        padding: 10px;
+    }
+    #contact{
+        padding: 20px;
+    }
+}
+@media screen and (max-width:400px){
+    .logo{
+        font-size: 25px;
+    }
+}
+
