@@ -1,1 +1,0 @@
-Download zip folder and run it on localhost.
