@@ -31,7 +31,7 @@
                         <a href="index.html#projects">Projects</a>
                     </li>
                     <li>
-                        <a href="contact.php">Contact</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -53,7 +53,7 @@
                     <a href="index.html#projects">Projects</a>
                 </li>
                 <li>
-                    <a href="contact.php">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
             </ul>
             <p class="social-icons">
@@ -70,25 +70,14 @@
     <header>
         <div class="container">
             <div class="form">
-                <form action="process.php" method="POST">
+                <form action="https://formspree.io/f/mgepdlnr" method="POST" >
                     <h1>Contact</h1>
-                    <!--<?php
-                        $Msg = "";
-                        if(isset($_GET['error'])){
-                            $Msg = "Please Enter All Fields.";
-                            echo "<div class='error'>".$Msg."</div>";
-                        }
-
-                        if(isset($_GET['success'])){
-                            $Msg = "Message Sent Successfully.";
-                            echo "<div class='success'>".$Msg."</div>";
-                        }
-                    ?>-->
-                    <input type="text" placeholder="Name" name="name">
-                    <input type="email" placeholder="Email" name="email">
-                    <input type="text" placeholder="Subject" name="subject">
-                    <textarea name="msg" placeholder="Enter The Message...."></textarea><br>
-                    <button type="submit" class="btn" name="send">Submit</button>
+                    <p class="alert-msg"></p>
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="text" placeholder="Subject" name="subject" required>
+                    <textarea name="msg" placeholder="Enter The Message...." required></textarea><br>
+                    <button type="submit" class="btn" value="send">Submit</button>
                 </form>
             </div>
         </div>
