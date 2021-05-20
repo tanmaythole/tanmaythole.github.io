@@ -443,11 +443,17 @@ header{
 .value-70{
     width: 70%;
 }
-.value-65{
+.value-75{
     width: 65%;
+}
+.value-80{
+    width: 60%;
 }
 .value-60{
     width: 60%;
+}
+.value-90{
+    width: 90%;
 }
 @media(max-width:992px){
     .skills-content{
