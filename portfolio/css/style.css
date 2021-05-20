@@ -423,7 +423,7 @@ header{
 }
 .skill-container{
     height: 15px;
-    width: 95%;
+    width: 85%;
     background: #fff;
     border-radius: 15px;
 }
@@ -457,12 +457,14 @@ header{
 }
 @media(max-width:992px){
     .skills-content{
-        width: 90%;
+        width: 85%;
+        margin: 1%;
     }
 }
 @media(max-width:542px){
     .skills-content{
-        width: 100%;
+        width: 90%;
+        margin: 1%;
     }
 }
 
