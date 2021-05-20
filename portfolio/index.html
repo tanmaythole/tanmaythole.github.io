@@ -6,76 +6,76 @@
     <title>Tanmay Thole</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo&family=Montserrat&family=Pattaya&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="navbar1">
-        <div class="nav-center">
+    <nav class="navbar">
+        <div class="nav-container">
             <div class="nav-header">
                 <div class="logo">
-                    Tanmay Thole
+                    <h1>Tanmay Thole</h1>
                 </div>
-                <button class="bars" id="nav-btn">
+                <button class="bars">
                     <i class="fa fa-bars"></i>
                 </button>
             </div>
             <div class="nav-menu">
                 <ul>
-                    <li>
-                        <a href="index.html">Home</a>
+                    <li class="nav-link">
+                        <a href="">Home</a>
                     </li>
-                    <li>
-                        <a href="index.html#about">About</a>
+                    <li class="nav-link">
+                        <a href="#about">About</a>
                     </li>
-                    <li>
+                    <li class="nav-link">
                         <a href="#projects">Projects</a>
                     </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
+                    <li class="nav-link">
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
-        </div>
     </nav>
     <aside class="sidebar" id="sidebar">
-        <div>
-            <button id="close-btn" class="close-btn">
+        <div class="sidebar-container">
+            <button class="close-btn">
                 <i class="fa fa-times"></i>
             </button>
-            <ul class="sidebar-links">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="index.html#about">About</a>
-                </li>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-            <p class="social-icons">
-                <a href="https://www.facebook.com/tanmaythole45"><i class="fa fa-facebook-square"></i></a>
-                <a href="https://www.twitter.com/tanmay_v_thole"><i class="fa fa-twitter"></i></a>
-                <a href="https://www.instagram.com/tanmay_v_thole"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/tanmay-thole-b82978175/"><i class="fa fa-linkedin"></i></a>
-                <a href="https://github.com/tanmaythole"><i class="fa fa-github"></i></a>
-            </p>
-            <p style="font-size: 17px; font-weight: bold;">&copy; 2021 Tanmay Thole | All Rights Reserved.</p>
-
+            <div class="asideMenu">
+                <ul>
+                    <li class="nav-link">
+                        <a href="">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#about" onclick="removesidebar()">About</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#projects" onclick="removesidebar()">Projects</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#contact" onclick="removesidebar()">Contact</a>
+                    </li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/tanmaythole45"><i class="fa fa-facebook-official"></i></a>
+                    <a href="https://twitter.com/tanmay_v_thole"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/tanmay_v_thole/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://github.com/tanmaythole"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/tanmay-thole-b82978175/"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
     </aside>
 
     <header>
-        <div class="container">
+        <div class="container" id="main-header">
             <div class="container-info">
                 <article class="info">
                     <p class="seek"></p>
-                    <p class="name">I'm Tanmay</p>
+                    <h1 class="name">I'm Tanmay</h1>
                     <p class="work">Web Developer</p>
                     <a href="contact.html"><button class="hire">HIRE ME</button></a>
                     <p class="social-links">
@@ -98,6 +98,9 @@
                 <p class="name">About</p>
                 <p class="seek"></p>
                 <p class="details">Hello, I am Tanmay Thole and I am Web developer. I individually works on designing and creating new Web pages. I spend most of my day, experimenting with HTML, CSS and JavaScript and its endless frameworks.</p>
+                <p class="details">
+                    Strong in design and integration with intuitive problem-solving skills. Passionate about implementing and launching new projects. Self-directed and energetic with superior performance in both autonomous or collaborative environments working independently and collaborating with others on group projects.
+                </p>
             </article>
         </div>
 
@@ -174,7 +177,21 @@
             </div>
         </div>
 
-        
+
+        <div class="container" id="contact">
+            <div class="form">
+                <form action="https://formspree.io/f/mgepdlnr" method="POST" >
+                    <h1>Contact</h1>
+                    <p class="alert-msg"></p>
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="text" placeholder="Subject" name="subject" required>
+                    <textarea name="msg" placeholder="Enter The Message...." required></textarea><br>
+                    <button type="submit" class="btn" value="send">Send</button>
+                </form>
+            </div>
+        </div>
+
     </header>
     <footer>
         <p class="social-links">
@@ -187,6 +204,7 @@
         <p>&copy; 2021 Tanmay Thole | All Rights Reserved.</p>
 
     </footer>
+    
     <script src="js/main.js"></script>
 </body>
 </html>
