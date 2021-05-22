@@ -11,6 +11,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
+    <!-- NavBar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-header">
@@ -39,6 +40,8 @@
             </div>
         </div>
     </nav>
+
+    <!-- SideBar -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-container">
             <button class="close-btn">
@@ -71,17 +74,19 @@
     </aside>
 
     <header>
+        <!-- Main -->
         <div class="container" id="main-header">
             <div class="container-info">
                 <article class="info">
                     <p class="seek"></p>
                     <h1 class="name">I'm Tanmay</h1>
-                    <p class="work">Web Developer</p>
+                    
+                    <p class="work">And I'm <span class="typed"></span></p>
                     <a href="contact.html"><button class="hire">HIRE ME</button></a>
                     <p class="social-links">
                         <a href="https://www.facebook.com/tanmaythole45"><i class="fa fa-facebook-square"></i></a>
-                        <a href="https://www.twitter.com/tanmay_v_thole"><i class="fa fa-twitter"></i></a>
                         <a href="https://www.instagram.com/tanmay_v_thole"><i class="fa fa-instagram"></i></a>
+                        <a href="https://github.com/tanmaythole"><i class="fa fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/tanmay-thole-b82978175/"><i class="fa fa-linkedin"></i></a>
                     </p>
                 </article>
@@ -90,6 +95,8 @@
                 </article>
             </div>
         </div>
+
+        <!-- About -->
         <div class="about" id="about">
             <article class="pic">
                 <img src="images/unnamed (1).jpg" alt="" class="img">
@@ -101,9 +108,11 @@
                 <p class="details">
                     Strong in design and integration with intuitive problem-solving skills. Passionate about implementing and launching new projects. Self-directed and energetic with superior performance in both autonomous or collaborative environments working independently and collaborating with others on group projects.
                 </p>
+                <p class="resume"><a target="_blank" href="files/resume.pdf" class="resume-btn">Download Resume</a></p>
             </article>
         </div>
 
+        <!-- Projects -->
         <div class="projects" id="projects">
             <div class="project-content">
                 <div class="project-title">
@@ -112,32 +121,32 @@
                 <div class="project-boxes">
                     <a class="box" href="https://github.com/tanmaythole/stadium_ticket_booking_system">
                         <div class="box-img">
-                            <img src="images/1.png" alt="">
+                            <img src="images/project-1.png" alt="Online Stadium Ticket Booking System">
                         </div>
                         <p>Online Stadium Ticket Booking</p>
                     </a>
-                    <a class="box" href="https://tanmaythole.github.io/To-Do%20List/todo.html">
+                    <a class="box" href="https://github.com/tanmaythole/IPL-Data-Analysis">
                         <div class="box-img">
-                            <img src="images/2.png" alt="">
+                            <img src="images/project-2.png" alt="IPL Data Analysis">
                         </div>
-                        <p>To-Do List</p>
+                        <p>IPL Data Analysis</p>
                     </a>
-                    <a class="box" href="https://tanmaythole.github.io/Weight%20Converter/">
+                    <a class="box" href="https://github.com/tanmaythole/tanmaythole.github.io/tree/master/php_foum_discussion_project">
                         <div class="box-img">
-                            <img src="images/3.png" alt="">
+                            <img src="images/project-3.png" alt="Discussion Forum">
                         </div>
-                        <p>Weight Converter</p>
+                        <p>Discussion Forum</p>
                     </a>
                 </div>
             </div>
         </div>
 
+        <!-- Skills -->
         <div class="skills">
             <div class="skills-content">
                 <h1>Skills</h1>
                 <div class="skills-category">
                     <div class="skills-type">
-                        <h2>Front End</h2>
                         <div class="skill">
                             <p>HTML</p>
                             <div class="skill-container">
@@ -151,15 +160,20 @@
                             </div>
                         </div>
                         <div class="skill">
-                            <p>JavaScript</p>
+                            <p>JS</p>
                             <div class="skill-container">
                                 <div class="skill-value value-60"><p>60%</p></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>C++</p>
+                            <div class="skill-container">
+                                <div class="skill-value value-85"><p>85%</p></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="skills-type">
-                        <h2>Back End</h2>
                         <div class="skill">
                             <p>PHP</p>
                             <div class="skill-container">
@@ -169,11 +183,17 @@
                         <div class="skill">
                             <p>Python</p>
                             <div class="skill-container">
-                                <div class="skill-value value-80"><p>80%</p></div>
+                                <div class="skill-value value-80"><p>85%</p></div>
                             </div>
                         </div>
                         <div class="skill">
                             <p>Django</p>
+                            <div class="skill-container">
+                                <div class="skill-value value-75"><p>75%</p></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>MySQL</p>
                             <div class="skill-container">
                                 <div class="skill-value value-75"><p>75%</p></div>
                             </div>
@@ -183,10 +203,14 @@
             </div>
         </div>
 
-
-        <div class="container" id="contact">
+        <!-- Contact -->
+        <div  id="contact">
+            <video id="video" autoplay muted loop>
+                <source src="videos/contact.mp4" type="video/mp4">
+            </video>
             <div class="form">
                 <form action="https://formspree.io/f/mgepdlnr" method="POST" >
+                    <p class="seek"></p>
                     <h1>Contact</h1>
                     <p class="alert-msg"></p>
                     <input type="text" placeholder="Name" name="name" required>
@@ -196,6 +220,7 @@
                     <button type="submit" class="btn" value="send">Send</button>
                 </form>
             </div>
+            
         </div>
 
     </header>
@@ -210,7 +235,7 @@
         <p>&copy; 2021 Tanmay Thole | All Rights Reserved.</p>
 
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

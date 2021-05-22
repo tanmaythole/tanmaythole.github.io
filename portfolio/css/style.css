@@ -44,6 +44,7 @@ nav{
         float: right;
         font-size: 30px;
         padding: 25px;
+        color: rgb(255, 153, 0);
         background: transparent;
         border: none;
         outline: none;
@@ -79,6 +80,9 @@ nav{
         font-size: 20px;
         font-family: 'Montserrat', sans-serif;
         color: #333;
+    }
+    .nav-link a:hover{
+        color: orange;
     }
 }
 
@@ -170,6 +174,10 @@ header{
     font-size: 20px;
     font-family: 'KoHo', sans-serif;
 }
+.typed{
+    color: rgb(63, 63, 63);
+    font-size: 22px;
+}
 .hire{
     margin-top: 25px;
     width: 100px;
@@ -250,9 +258,25 @@ header{
     width: 60px;
 }
 .about .details{
-    margin-top: 20px;
+    margin: 20px 0;
     font-family: 'Ubuntu', sans-serif;
     color: rgb(157, 157, 185);
+}
+.about .resume-btn{
+    background: orange;
+    padding: 10px 20px;
+    font-size: 17px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+}
+.about .resume-btn:hover{
+    background: transparent;
+    border: 2px solid orange;
+    color: orange;
+    transition: .3s ease-in-out;
 }
 
 
@@ -283,10 +307,10 @@ header{
         float: none;
         text-align: center;
     }
-    .about .pic .img{
+    /* .about .pic .img{
         width: 250px;
         height: 300px;
-    }
+    } */
     .about .info{
         padding-top: 10px;
         position: relative;
@@ -303,11 +327,12 @@ header{
 .projects{
     background: rgb(212, 206, 206);
 }
-.project-title{
+.project-title h1{
     padding: 30px;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 28px;
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-size: 45px;
+    font-weight: bolder;
 }
 .project-content{
     padding: 20px 0;
@@ -401,7 +426,8 @@ header{
     text-align: center;
     font-size: 45px;
     padding: 30px;
-    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-weight: bolder;
 }
 .skills-content{
     width: 80%;
@@ -440,6 +466,18 @@ header{
     left: 95%;
     position: relative;
 }
+.value-50{
+    width: 50%;
+}
+.value-55{
+    width: 55%;
+}
+.value-60{
+    width: 60%;
+}
+.value-65{
+    width: 65%;
+}
 .value-70{
     width: 70%;
 }
@@ -449,11 +487,17 @@ header{
 .value-80{
     width: 80%;
 }
-.value-60{
-    width: 60%;
+.value-85{
+    width: 85%;
 }
 .value-90{
     width: 90%;
+}
+.value-95{
+    width: 95%;
+}
+.value-100{
+    width: 100%;
 }
 @media(max-width:992px){
     .skills-content{
@@ -516,14 +560,20 @@ footer p{
         Contact Form
 ===============================
 */
+
 .form{
     width: 450px;
     margin: auto;
     padding: 50px;
 }
+.form .seek{
+    margin: auto;
+}
 .form h1{
     padding: 10px;
+    font-size: 45px;
     text-align: center;
+    font-weight: bolder;
 }
 form input,form textarea{
     width: 100%;
@@ -548,6 +598,14 @@ form .btn{
     color: #fff;
     cursor: pointer;
     outline: none;
+}
+#video{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 500px;
+    opacity: 0.5;
+    object-fit: cover;
 }
 
 @media(max-width:430px){
