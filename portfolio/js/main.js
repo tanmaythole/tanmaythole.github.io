@@ -13,7 +13,9 @@ window.addEventListener("scroll", function(){
     }
 });
 
-// Show/Remove SideBar
+// =======================
+//  Show/Remove SideBar
+// =======================
 sidebarbtn.addEventListener("click", function(e){
     sidebar.classList.add("show-sidebar");
 });
@@ -36,7 +38,15 @@ var typed = new Typed('.typed',{
 });
 
 
-// Scroll Animation
+
+
+
+
+// ========================
+//     Scroll Animation
+// ========================
+
+// from top
 const sr = ScrollReveal({
     origin: 'top',
     distance: '70px',
@@ -51,13 +61,14 @@ sr.reveal('.container-info .social-links a', {delay:300, interval:200})
 sr.reveal('.container-info .pic', {delay: 400})
 
 
-sr.reveal('.about .info p, .form h1, .form .seek', {interval:100})
+// sr.reveal('.about .info p, .contact-desc h1, .contact-desc .seek, .contact-desc .contact-tagline', {interval:100})
 
-sr.reveal('.project-boxes .box', {interval: 200})
+// sr.reveal('.project-boxes .box', {interval: 200})
 
-sr.reveal('.skills h1, .projects h1, .skills h2', {})
-sr.reveal('.skill', {interval:200})
+// sr.reveal('.skills h1, .projects h1, .skills h2', {})
+// sr.reveal('.skill', {interval:200})
 
+// from bottom
 srbot = ScrollReveal({
     origin: 'bottom',
     distance: '80px',
@@ -65,5 +76,32 @@ srbot = ScrollReveal({
     duration: 1000,
     reset: true
 })
+srbot.reveal('.about .info p, .contact-desc h1, .contact-desc .seek, .contact-desc .contact-tagline', {interval:100})
 
+srbot.reveal('.project-boxes .box', {interval: 200})
+
+srbot.reveal('.skills h1, .projects h1, .skills h2', {})
+srbot.reveal('.skill', {interval:200})
 srbot.reveal('.form input, .form textarea, .form button',{interval:200})
+srbot.reveal('.back-to-top-btn', {delay: 120})
+
+
+// =========================
+//     Back To Top Button
+// =========================
+var backtotop = document.querySelector('.back-to-top-btn');
+
+window.onscroll = function(){
+    if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+        backtotop.style.display = "block";
+    }
+    else{
+        backtotop.style.display = "none";
+    }
+}
+
+backtotop.addEventListener('click', function(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+

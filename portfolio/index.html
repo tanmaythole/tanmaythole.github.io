@@ -82,7 +82,7 @@
                     <h1 class="name">I'm Tanmay</h1>
                     
                     <p class="work">And I'm <span class="typed"></span></p>
-                    <a href="contact.html"><button class="hire">HIRE ME</button></a>
+                    <a href="#contact"><button class="hire">HIRE ME</button></a>
                     <p class="social-links">
                         <a href="https://www.facebook.com/tanmaythole45"><i class="fa fa-facebook-square"></i></a>
                         <a href="https://www.instagram.com/tanmay_v_thole"><i class="fa fa-instagram"></i></a>
@@ -108,7 +108,7 @@
                 <p class="details">
                     Strong in design and integration with intuitive problem-solving skills. Passionate about implementing and launching new projects. Self-directed and energetic with superior performance in both autonomous or collaborative environments working independently and collaborating with others on group projects.
                 </p>
-                <p class="resume"><a target="_blank" href="files/resume.pdf" class="resume-btn">Download Resume</a></p>
+                <p class="resume"><a target="_blank" href="files/resume.pdf" class="resume-btn">Download Resume &nbsp;<i class="fa fa-download"></i></a></p>
             </article>
         </div>
 
@@ -205,14 +205,18 @@
 
         <!-- Contact -->
         <div  id="contact">
-            <video id="video" autoplay muted loop>
+            <!-- <img src="images/contact.png" alt="" id="contactBGPic"> -->
+            <video id="video" autoplay muted loop poster="images/contact.png">
                 <source src="videos/contact.mp4" type="video/mp4">
             </video>
+            <div class="contact-desc">
+                <p class="seek"></p>
+                <h1>Get In Touch</h1>
+                <p class="contact-tagline"><span>Let's create something together.</span> Simply complete the quick contact form below and I'll reply (usually within a day) to discuss your requirements.</p>
+                <p class="contact-tagline">I currently have good availability!</p>
+            </div>
             <div class="form">
                 <form action="https://formspree.io/f/mgepdlnr" method="POST" >
-                    <p class="seek"></p>
-                    <h1>Contact</h1>
-                    <p class="alert-msg"></p>
                     <input type="text" placeholder="Name" name="name" required>
                     <input type="email" placeholder="Email" name="email" required>
                     <input type="text" placeholder="Subject" name="subject" required>
@@ -224,6 +228,7 @@
         </div>
 
     </header>
+    <button class="back-to-top-btn"><b><i class="fa fa-angle-up"></i></b></button>
     <footer>
         <p class="social-links">
             <a href="https://www.facebook.com/tanmaythole45"><i class="fa fa-facebook-square"></i></a>
