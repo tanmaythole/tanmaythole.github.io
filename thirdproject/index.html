@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ब्रह्म राष्ट्र एकम</title>
+</head>
+
+<body class="alert-secondary">
+    <!-- Gaytri Mantra -->
+    <iframe src="audio/gayatri-mantra.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> 
+    <audio autoplay loop id="playaudio">
+        <source src="audio/gayatri-mantra.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container bg-light col-md-5 py-3 text-center px-0 shadow-lg">
+        <div class="nav">
+            <img src="images/logo.png" alt=""> 
+            <h1 class="heading">ब्रह्म राष्ट्र एकम</h1>
+        </div>
+
+        <!-- Carousel -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/brahm2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/brahm4.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/brahm5.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Main Links -->
+        <div class="box py-2">
+            <h3 class="m-0"><a href="vidit.html" class="nav-link text-dark p-0">विदित</a></h3>
+            <small class="text-muted">जानिए</small>
+        </div>
+        <div class="box py-2">
+            <h3 class="m-0"><a href="ekya.html" class="nav-link text-dark p-0">ऐक्य</a></h3>
+            <small class="text-muted">संरक्षक बनिए</small>
+        </div>
+        <div class="box py-2">
+            <h3 class="m-0"><a href="nishchay.html" class="nav-link text-dark p-0">निश्चय</a></h3>
+            <small class="text-muted">सम्मान और समाधान</small>
+        </div>
+
+        <!-- Home page footer -->
+        <div class="bottom-nav">
+            <a href=""><small class="text-muted">ऐप</small></a>
+            <small class="text-muted">|</small>
+            <a href="social.html"><small class="text-muted">सोशल</small></a>
+            <small class="text-muted">|</small>
+            <a href="news.html"><small class="text-muted">समाचार में</small></a>
+            <small class="text-muted">|</small>
+            <a href="login.html"><small class="text-muted">आधिकारिक लॉगिन </small></a>
+            <small class="text-muted">|</small>
+            <a href="contact.html"><small class="text-muted">सम्पर्क</small></a>
+        </div>
+
+        <!-- Static footer -->
+        <div class="change-lang"><a href="en.html" class="nav-link text-dark pt-5">English</a></div>
+        <div class="footer-link">
+            <p><a href="privacy.html">गोपनीयता नीति</a></p>
+            <p>|</p>
+            <p>ब्रह्म राष्ट्र एकम &copy; २०२१</p>
+            <p>|</p>
+            <p>सभी अधिकार सुरक्षित</p>
+            <p>|</p>
+            <p>उपयोग की शर्तें</p>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script>
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (!isChrome){
+            $('#iframeAudio').remove()
+        }
+        else {
+            $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+        }
+    </script>
+</body>
+
+</html>

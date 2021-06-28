@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.nav img{
+    width: 15%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+}
+.nav{
+    height: 60px;
+}
+.nav h1{
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.carousel img{
+    height: 320px;
+}
+.bottom-nav{
+    width: 70%;
+    padding-top: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-link{
+    width: 74%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+}
+.footer-link a{
+    text-decoration: none;
+    color: #333;
+}
+.social-icons{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.social-icons a{
+    text-decoration: none;
+    color: #333;
+}
+.social-icons a:hover{
+    transform: scale(1.1);
+}
+.social-icon{
+    width: 45%;
+    padding: 10px 0;
+    font-size: 18px;
+    margin: auto;
+    display: flex;
+    /* justify-content: space-between; */
+}
+.social-icon i{
+    padding-left: 15px;
+    text-align: left;
+}
+
+
+/* For Login form */
+.login-form{
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+.btn{
+    background: #F4C430;
+    color: #fff;
+}
+.form-control{
+    border: 1px solid #F4C430;
+}
+.form-control:focus{
+    border: 1px solid #F4C430;
+    box-shadow:0 0 0 .2rem #f3d57a;
+}
+
+/* News */
+.news-container,
+.nishchay-container,
+.privacy-container{
+    width: 70%;
+    margin: 0 auto;
+}
+/* Nishchay */
+.nishchay-container{
+    font-size: 15px;
+}
+.nishchay-container img{
+    width: 70%;
+    padding: 10px 0;
+}
+
+
+
+.change-lang{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.change-lang a{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Vidit */
+.vidit-container{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+/* Ekya */
+.form-container{
+    width: 70%;
+    margin: auto;
+    padding: 20px 0;
+}
+select option{
+    background: #F4C430;
+}
+/* for chrome, safari */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+#SignatureController{
+    height: 150px;
+}
+.clearSignature{
+    float: right;
+    border: 1px solid #f4c430;
+    border-radius: 3px;
+    background: #f3d57a;
+    padding: 0 5px;
+    outline: #f3d57a;
+}
