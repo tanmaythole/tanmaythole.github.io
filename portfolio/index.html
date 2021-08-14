@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanmay Thole</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=KoHo&family=Montserrat&family=Pattaya&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <div id="begin_body" style="display: none;">
+        <!-- NavBar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-header">
+                    <div class="logo">
+                        <h1>Tanmay Thole</h1>
+                    </div>
+                    <button class="bars">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li class="nav-link">
+                            <a href="">Home</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#services">Services</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- SideBar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-container">
+                <button class="close-btn">
+                    <i class="fa fa-times"></i>
+                </button>
+                <div class="asideMenu">
+                    <ul>
+                        <li class="nav-link">
+                            <a href="">Home</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#about" onclick="removesidebar()">About</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#services" onclick="removesidebar()">Services</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#projects" onclick="removesidebar()">Projects</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#contact" onclick="removesidebar()">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/tanmaythole45"><i class="fa fa-facebook-official"></i></a>
+                        <a href="https://twitter.com/tanmay_v_thole"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/tanmay_v_thole/"><i class="fa fa-instagram"></i></a>
+                        <a href="https://github.com/tanmaythole"><i class="fa fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/tanmay-thole-b82978175/"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    
+        <header>
+            <!-- Main -->
+            <div class="container" id="main-header">
+                <div class="container-info">
+                    <article class="info">
+                        <p class="seek"></p>
+                        <h1 class="name">I'm Tanmay</h1>
+                        <p class="work">And I'm <span class="typed"></span></p>
+                        <a href="#contact"><button class="hire">HIRE ME</button></a>
+                        <p class="social-links">
+                            <a href="https://www.facebook.com/tanmaythole45"><i class="fa fa-facebook-square"></i></a>
+                            <a href="https://www.instagram.com/tanmay_v_thole"><i class="fa fa-instagram"></i></a>
+                            <a href="https://github.com/tanmaythole"><i class="fa fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/tanmay-thole-b82978175/"><i class="fa fa-linkedin"></i></a>
+                        </p>
+                    </article>
+                    <article class="pic">
+                        <img src="images/Tanmay.jpg" class="img" alt="Tanmay Thole">
+                    </article>
+                </div>
+            </div>
+    
+            <!-- About -->
+            <div class="about" id="about">
+                <div class="about-container">
+                    <div class="title">
+                        <p class="name">About Me</p>
+                        <p class="seek" style="margin: auto;"></p>
+                    </div>
+                    <article class="info1">
+                        <p class="details">Hello, I am Tanmay Thole currently pursing my Engineering graduate degree in D. Y. Patil College of Engineering, Pune. I am Full Stack Web developer and data science enthusiast.
+                            I individually works on designing & developing and creating new Web applications. I spend most of my day, experimenting with Python, PHP, HTML/CSS, JavaScript and
+                            its endless frameworks.</p>
+                        <p class="details">
+                            I am strong in design and integration with intuitive problem-solving skills, passionate about
+                            implementing and launching new projects, self-directed and energetic with superior performance in
+                            both autonomous or collaborative environments working independently and collaborating with others on
+                            group projects.
+                        </p>
+                        <p class="resume"><a target="_blank" href="files/resume.pdf" class="resume-btn">Download Resume &nbsp;<i
+                                    class="fa fa-download"></i></a></p>
+                    </article>
+                </div>
+            </div>
+    
+            <!-- Services -->
+            <div class="services" id="services">
+                <div class="service-title">
+                    <h1>Services</h1>
+                    <p class="seek"></p>
+                    <p class="tagline">What Can I do</p>
+                </div>
+                <div class="container">
+                    <div class="column">
+                        <div class="services-img">
+                            <img src="images/problem-solving.png" alt="">
+                        </div>
+                        <div class="service-info">
+                            <h3>Problem Solving</h3>
+                            <p class="desc">
+                                Want to make any problem look like a easy thing , then you're at right place. I practice on platforms like hackerrank, geeksforgeeks and apart from it I am 3 star coder at codechef.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="services-img">
+                            <img src="images/web_developement.png" alt="">
+                        </div>
+                        <div class="service-info">
+                            <h3>Full Stack Developement</h3>
+                            <p class="desc">
+                                If you want website or web application or any complex project, then you're at right place. I am a full stack developer with skillset of PHP, MySQL, Python, etc. Apart from this currently I am into Django.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="services-img">
+                            <img src="images/web-designing.png" alt="">
+                        </div>
+                        <div class="service-info">
+                            <h3>Web Designer</h3>
+                            <p class="desc">
+                                Have been into it since I started my engineering. I am a developer as well as designer. Apart from HTML,CSS,JS currently I am into React.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Projects -->
+            <div class="projects" id="projects">
+                <div class="project-title">
+                    <h1>Projects</h1>
+                    <p class="seek"></p>
+                </div>
+    
+                <div class="container">
+                  <div class="item" id="1">
+                    <img src="images/project-1.png" alt="">
+                    <div class="text">
+                      <h3>Online Stadium Ticket Booking System</h4>
+                      <p>MySQL project</p>
+                    </div>
+                    <div class="button1">View More</div>
+                  </div>
+            
+                  <div class="item" id="2">
+                    <img src="images/project-2.png" alt="">
+                    <div class="text">
+                      <h3>IPL Data Analysis</h4>
+                      <p>Python, Machine Learning</p>
+                    </div>
+                    <div class="button1">View More</div>
+                  </div>
+            
+                  <div class="item" id="3">
+                    <img src="images/project-3.png" alt="">
+                    <div class="text">
+                        <h3>Image Resolution</h4>
+                        <p>Python, Tkinter</p>
+                      </div>
+                      <div class="button1">View More</div>
+                  </div>
+            
+                  <div class="item" id="4">
+                    <img src="images/project-4.png" alt="">
+                    <div class="text">
+                      <h3>Discussion Forum</h4>
+                      <p>PHP, MySQL</p>
+                    </div>
+                    <div class="button1">View More</div>
+                  </div>
+            
+                  <div class="item" id="5">
+                    <img src="images/project-5.png" alt="">
+                    <div class="text">
+                      <h3>Portfolio Website</h4>
+                      <p>Web Design</p>
+                    </div>
+                    <div class="button1">View More</div>
+                  </div>
+            
+                  <div class="item" id="6">
+                    <img src="images/project-6.jpeg" alt="">
+                    <div class="text">
+                      <h3>Desktop Virtual Assistant</h4>
+                      <p>Python, AI</p>
+                    </div>
+                    <div class="button1">View More</div>
+                  </div>
+    
+                  <div class="item" id="7">
+                    <img src="images/project-7.png" alt="">
+                    <div class="text">
+                      <h3>New Words Detector</h4>
+                      <p>Flask, File Handling in Python, Ajax</p>
+                    </div>
+                    <div class="button1">View More</div>
+                  </div>
+    
+                  <div class="item" id="8">
+                    <img src="images/project-8.png" alt="">
+                    <div class="text">
+                      <h3>E-commerce Website</h4>
+                      <p>Django, Ajax, Bootstrap, JQuery</p>
+                    </div>
+                    <div class="button1">View More</div>
+                  </div>
+              </div>
+            
+              <!-- Modal -->
+              <div id="preview" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <img id="img" src="">
+                  <div id="details">
+                    <h3 id="title"></h3>
+                    <p id="info">Some text</p>
+                    <div class="button" id="live">View</div>
+                      <!-- <i class="fab fa-github-square" id="github"></i> -->
+                      <svg id="github" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+    width="48" height="48"
+    viewBox="0 0 172 172"
+    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="#333333"></path><g fill="#f5af23"><path d="M76.59125,1.94369c-39.23033,4.26417 -70.78517,35.819 -75.04933,74.1965c-4.26417,40.08317 18.76233,75.90217 53.7285,89.5475c2.5585,0.85283 5.117,-0.85283 5.117,-4.26417v-13.64533c0,0 -3.41133,0.85283 -7.6755,0.85283c-11.93967,0 -17.05667,-10.234 -17.9095,-16.20383c-0.85283,-3.41133 -2.5585,-5.96983 -5.117,-8.52833c-2.5585,-0.85283 -3.41133,-0.85283 -3.41133,-1.70567c0,-1.70567 2.5585,-1.70567 3.41133,-1.70567c5.117,0 9.38117,5.96983 11.08683,8.52833c4.26417,6.82267 9.38117,8.52833 11.93967,8.52833c3.41133,0 5.96983,-0.85283 7.6755,-1.70567c0.85283,-5.96983 3.41133,-11.93967 8.52833,-15.351c-19.61517,-4.26417 -34.11333,-15.351 -34.11333,-34.11333c0,-9.38117 4.26417,-18.76233 10.234,-25.585c-0.85283,-1.70567 -1.70567,-5.96983 -1.70567,-11.93967c0,-3.41133 0,-7.6755 1.70567,-11.08683c0,-1.70567 1.70567,-2.5585 2.5585,-2.5585h0.85283c4.26417,0.85283 12.7925,3.41133 20.468,11.08683c5.117,-1.70567 11.08683,-2.5585 17.05667,-2.5585c5.96983,0 11.93967,0.85283 17.05667,2.5585c7.6755,-7.6755 17.05667,-10.234 21.32083,-11.08683h0.85283c1.70567,0 2.5585,0.85283 3.41133,2.5585c0,3.41133 0,7.6755 0,11.08683c0,6.82267 -0.85283,10.234 -1.70567,11.93967c5.96983,6.82267 10.234,15.351 10.234,25.585c0,18.76233 -14.49817,29.84917 -34.11333,34.11333c5.117,4.26417 8.52833,11.93967 8.52833,19.61517v22.17367c0,2.5585 2.5585,5.117 5.96983,4.26417c31.55483,-12.7925 53.7285,-43.4945 53.7285,-79.3135c0,-51.17 -43.4945,-91.25317 -94.6645,-85.28333z"></path></g></g></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            
+    
+            <!-- Skills -->
+            <div class="skills" id="skills">
+                <div class="skills-title">
+                    <h1>Skills</h1>
+                    <p class="seek"></p>
+                    <p class="tagline">Whats I Know</p>
+                </div>
+                <div class="container" id="skills-container">
+                    <div class="row">
+                        <div class="skill">
+                            <img src="images/cpp.svg" alt="">
+                            <h6>C++</h6>
+                        </div>
+                        <div class="skill">
+                            <img src="images/python.png" alt="">
+                            <h6>Python</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="skill">
+                            <img src="images/html5.png" alt="">
+                            <h6>HTML</h6>
+                        </div>
+                        <div class="skill">
+                            <img src="images/css.png" alt="">
+                            <h6>CSS</h6>
+                        </div>
+                        <div class="skill">
+                            <img src="images/javascript.png" alt="">
+                            <h6>JavaScript</h6>
+                        </div>
+                        <div class="skill">
+                            <img src="images/react.png" alt="">
+                            <h6>React</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="skill">
+                            <img src="images/php.png" alt="">
+                            <h6>PHP</h6>
+                        </div>
+                        <div class="skill">
+                            <img src="images/flask.jpg" alt="">
+                            <h6>Flask</h6>
+                        </div>
+                        <div class="skill">
+                            <img src="images/django.png" alt="">
+                            <h6>Django</h6>
+                        </div>
+                        <div class="skill">
+                            <img src="images/mysql.png" alt="">
+                            <h6>MySQL</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="skill">
+                            <img src="images/bootstrap.svg" alt="">
+                            <h6>Bootstrap</h6>
+                        </div>
+                        <div class="skill">
+                            <img src="images/python.png" alt="">
+                            <h6>Tkinter</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="blogs" id="blogs">
+                <div class="blogs-title">
+                    <h1>Blogs</h1>
+                    <p class="seek"></p>
+                    <p class="tagline">Whats I write while learning</p>
+                </div>
+                <div class="container" id="blog-container">
+                    <div class="row">
+                        <div class="blog">
+                            <img src="images/gfg.png" alt="">
+                            <div class="blog-info">
+                                <h5 class="blog-title">
+                                    How to print Colored text in C++
+                                </h5>
+                                <div class="blog-desc">
+                                    It explains how we print colored text in c++ terminal on windows using #include &lt;windows.h&gt; header file
+                                </div>
+                                <a href="https://www.geeksforgeeks.org/how-to-print-colored-text-in-c/" class="blog-btn">View Blog</a>
+                            </div>
+                        </div>
+                        <div class="blog">
+                            <img src="images/gfg.png" alt="">
+                            <div class="blog-info">
+                                <h5 class="blog-title">
+                                    Longest subarray with difference exactly K between any two distinct values
+                                </h5>
+                                <div class="blog-desc">
+                                    It explains about how to find longest subarray for given condition.
+                                </div>
+                                <a href="https://www.geeksforgeeks.org/how-to-print-colored-text-in-c/" class="blog-btn">View Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Testinomial -->
+            <div class="testimonials" id="testimonials">
+                <div class="testimonials-title">
+                    <h1>Testimonial</h1>
+                    <p class="seek"></p>
+                    <p class="tagline">What Clients Thinks</p>
+                </div>
+                <div class="container" id="testimonials-container">
+                    <div class="myslide">
+                        <img class="client-img" src="images/client1.jpg" alt="">
+                        <p class="client-msg">
+                            "Tanmay is an excellent programmer. He managed to finished my application faster than he promised. He is good at communicating with client and very patient. Highly recommend him!"
+                        </p>
+                        <p class="client-info">Soma 17</p>
+                    </div>
+    
+                    <div class="myslide">
+                        <img class="client-img" src="images/client2.webp" alt="">
+                        <p class="client-msg">
+                            "Tanmay is very good Man. Also his work is top quality. I am very happy to work with Tanmay. I will hire again for my next work."
+                        </p>
+                        <p class="client-info">Satyam Sharma</p>
+                    </div>
+    
+                    <div class="myslide">
+                        <img class="client-img" src="images/client3.jpeg" alt="">
+                        <p class="client-msg">
+                            "Seriously had a great time working with Tanmay. He understands the issue and provides root cause analysis of the same. Excellent. Keep it up Tanmay."
+                        </p>
+                        <p class="client-info">Shrinivas Pandurangi</p>
+                    </div>
+                    
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+    
+            <!-- Contact -->
+            <div id="contact">
+                <!-- <img src="images/contact.png" alt="" id="contactBGPic"> -->
+                <video id="video" autoplay muted loop poster="images/contact.png">
+                    <source src="videos/contact.mp4" type="video/mp4">
+                </video>
+                <div class="contact-desc">
+                    <p class="seek"></p>
+                    <h1>Get In Touch</h1>
+                    <p class="contact-tagline"><span>Let's create something together.</span> Simply complete the quick
+                        contact form below and I'll reply (usually within a day) to discuss your requirements.</p>
+                    <p class="contact-tagline">I currently have good availability!</p>
+                </div>
+                <div class="form">
+                    <form action="https://formspree.io/f/mgepdlnr" method="POST">
+                        <input type="text" placeholder="Name" name="name" required>
+                        <input type="email" placeholder="Email" name="email" required>
+                        <input type="text" placeholder="Subject" name="subject" required>
+                        <textarea name="msg" placeholder="Enter The Message...." required></textarea><br>
+                        <button type="submit" class="btn" value="send">Send</button>
+                    </form>
+                </div>
+    
+            </div>
+    
+        </header>
+        <button class="back-to-top-btn"><b><i class="fa fa-angle-up"></i></b></button>
+        <footer>
+            <p class="social-links">
+                <a href="https://www.facebook.com/tanmaythole45"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://www.twitter.com/tanmay_v_thole"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/tanmay_v_thole"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/tanmay-thole-b82978175/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/tanmaythole"><i class="fa fa-github"></i></a>
+            </p>
+            <p>&copy; 2021 Tanmay Thole | All Rights Reserved.</p>
+    
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
