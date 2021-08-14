@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1 class="logo">LOGO</h1>
+            <ul>
+                <li><img src="icons/search_black_24dp.svg" alt=""></li>
+                <li><img src="icons/person_black_24dp.svg" alt=""></li>
+                <li><img src="icons/shopping_cart_black_24dp.svg" alt=""></li>
+                <li><button class="red-btn">LOGIN</button></li>
+            </ul>
+        </nav>
+        <hr style="border: 1px solid #F2F2F2;">
+        <div class="nav-links container">
+            <div class="nav-link">
+                <a href="">HOME</a>
+            </div>
+            <div class="nav-link dropdown">
+                <a href="">CARS</a>
+                <div class="dropdown-content">
+                    <a href="">Item 1</a>
+                    <a href="">Item 2</a>
+                    <a href="">Item 3</a>
+                    <a href="">Item 4</a>
+                </div>
+            </div>
+            <div class="nav-link">
+                <a href="">NEWS</a>
+            </div>
+            <div class="nav-link">
+                <a href="">BLOG</a>
+            </div>
+            <div class="nav-link">
+                <a href="">ABOUT US</a>
+            </div>
+            <div class="nav-link">
+                <a href="">FEATURES</a>
+            </div>
+            <div class="nav-link">
+                <a href="">CONTACT US</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Home -->
+        <section id="home">
+            <div class="slideshow">
+                <img class="slide" src="images/car1.jpg" alt="">
+                <img class="slide" src="images/car2.jpg" alt="">
+                <img class="slide" src="images/car3.jpg" alt="">
+            </div>
+            <div class="container">
+                <h1>FIND YOUR DREAM CAR</h1>
+                <a href="" class="red-btn">CONTACT US</a>
+            </div>
+        </section>
+
+        <!-- price slider -->
+        <section id="search-container">
+            <div class="container">
+                <ul>
+                    <li>
+                        <button id="new-car" class="active" onclick="changebtn(1);">
+                            <i class="fa fa-car"></i><br /> New Cars
+                        </button>
+                    </li>
+                    <li>
+                        <button id="used-car" onclick="changebtn(2);">
+                            <i class="fa fa-car"></i><br /> Used Cars
+                        </button>
+                    </li>
+                    <li>
+                        <button id="parts" onclick="changebtn(3);">
+                            <i class="fa fa-wrench"></i><br /> Parts
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="search-box">
+                    <form action="">
+                        <div class="select-input-row">
+                            <select name="" id="">
+                                <option value selected disabled>Select Year</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                            </select>
+                            <select name="" id="">
+                                <option value selected disabled>Select Transmission</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4/option>
+                            </select>
+                            <select name="" id="">
+                                <option value selected disabled>Select Mileage</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <select name="" id="">
+                                <option value selected disabled>Select Make</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <select name="" id="">
+                                <option value selected disabled>Select Model</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                        </div>
+
+                        <!-- Range Slider -->
+                        <div slider id="slider-distance">
+                            <div>
+                              <div inverse-left style="width:70%;"></div>
+                              <div inverse-right style="width:70%;"></div>
+                              <div range style="left:0%;right:0%;"></div>
+                              <span thumb style="left:0%;"></span>
+                              <span thumb style="left:100%;"></span>
+                              <div sign style="left:0%;">
+                                <span id="value">1</span>
+                              </div>
+                              <div sign style="left:100%;">
+                                <span id="value">500</span>
+                              </div>
+                            </div>
+                            <input type="range" value="0" max="500" min="1" step="1" oninput="
+                            this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+                            let value = (this.value/parseInt(this.max))*100
+                            var children = this.parentNode.childNodes[1].childNodes;
+                            children[1].style.width=value+'%';
+                            children[5].style.left=value+'%';
+                            children[7].style.left=value+'%';children[11].style.left=value+'%';
+                            children[11].childNodes[1].innerHTML='$'+ this.value+'k';" />
+                          
+                            <input type="range" value="500" max="500" min="1" step="1" oninput="
+                            this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+                            let value = (this.value/parseInt(this.max))*100
+                            var children = this.parentNode.childNodes[1].childNodes;
+                            children[3].style.width=(100-value)+'%';
+                            children[5].style.right=(100-value)+'%';
+                            children[9].style.left=value+'%';children[13].style.left=value+'%';
+                            children[13].childNodes[1].innerHTML= '$'+ this.value+'k';" />
+                        </div>
+
+                        <input type="submit" class="red-btn" style="float: right; margin-top: 30px;" value="SEARCH THE VEHICLE">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+            <div class="container">
+                <h6>Why Choose Us?</h6>
+                <h1>We are the best</h1>
+                <div class="row">
+                    <fieldset>
+                        <legend><i class="fa fa-car"></i></legend>
+                        <h3>ALL BRANDS</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus ad corrupti explicabo expedita distinctio placeat aliquid. Necessitatibus sunt voluptates similique aut totam.</p>
+                    </fieldset>
+                    <fieldset>
+                        <legend><i class="fa fa-ticket"></i></legend>
+                        <h3>FREE SUPPORT</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus ad corrupti explicabo expedita distinctio placeat aliquid. Necessitatibus sunt voluptates similique aut totam.</p>
+                    </fieldset>
+                    <fieldset>
+                        <legend><i class="fa fa-comments"></i></legend>
+                        <h3>DEALERSHIP</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus ad corrupti explicabo expedita distinctio placeat aliquid. Necessitatibus sunt voluptates similique aut totam.</p>
+                    </fieldset>
+                    <fieldset>
+                        <legend><i class="fa fa-credit-card"></i></legend>
+                        <h3>AFFORDABLE</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus ad corrupti explicabo expedita distinctio placeat aliquid. Necessitatibus sunt voluptates similique aut totam.</p>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallex -->
+        <section id="parallax">
+            <div class="parallax">
+                <div class="contact-wrapper">
+                    <img src="images/car.jpg"class="user-img" alt="">
+                    <div class="contact-info">
+                        <h2 style="margin-bottom: 10px;">Have any question ?</h2>
+                        <h1 style="color: red; font-size: 40px;">+(61) 154 656 545</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Car -->
+        <section id="latest">
+            <div class="container">
+                <h5 style="font-size: 18px;">Check out our Latest Car</h5>
+                <h1 style="font-size: 36px;">LATEST CAR</h1>
+                <div class="row">
+                    <div class="card">
+                        <img src="images/car1.jpg" alt="">
+                        <div class="card-body">
+                            <h2>2016 AUDI S4</h2>
+                            <div class="price">
+                                <p style="color: #cacaca;"><strike>$206,800.00</strike></p>
+                                <p style="color: #333;">$206,300.00</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="card-btn">READ MORE <img style="height: 18px; line-height: 35px; width: 18px;" src="icons/arrow_forward_white_24dp.svg" alt=""></button>
+                            <div class="more-icons">
+                                <img style="width: 17px; height: 17px;" src="icons/link_white_18dp.svg" alt="">
+                                <img style="width: 17px; height: 17px;" src="icons/close_fullscreen_white_18dp.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/car2.jpg" alt="">
+                        <div class="card-body">
+                            <h2>2016 AUDI S4</h2>
+                            <div class="price">
+                                <p style="color: #cacaca;"><strike>$206,800.00</strike></p>
+                                <p style="color: #333;">$206,300.00</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="card-btn">READ MORE <img style="height: 18px; line-height: 35px; width: 18px;" src="icons/arrow_forward_white_24dp.svg" alt=""></button>
+                            <div class="more-icons">
+                                <img style="width: 17px; height: 17px;" src="icons/link_white_18dp.svg" alt="">
+                                <img style="width: 17px; height: 17px;" src="icons/close_fullscreen_white_18dp.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/car3.jpg" alt="">
+                        <div class="card-body">
+                            <h2>2016 AUDI S4</h2>
+                            <div class="price">
+                                <p style="color: #cacaca;"><strike>$206,800.00</strike></p>
+                                <p style="color: #333;">$206,300.00</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="card-btn">READ MORE <img style="height: 18px; line-height: 35px; width: 18px;" src="icons/arrow_forward_white_24dp.svg" alt=""></button>
+                            <div class="more-icons">
+                                <img style="width: 17px; height: 17px;" src="icons/link_white_18dp.svg" alt="">
+                                <img style="width: 17px; height: 17px;" src="icons/close_fullscreen_white_18dp.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Popup -->
+        <section id="promotion">
+            <div id="light">
+                <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+                <video id="VisaChipCardVideo" width="600" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    <!--Browser does not support <video> tag -->
+                </video>
+            </div>
+            <div id="fade1" onClick="lightbox_close();"></div>
+            <div class="video-image">
+                <video>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4"  type="video/mp4">
+                </video>
+                <button onclick="lightbox_open();"><img src="icons/play_circle_outline_white_24dp.svg" alt=""></button>
+            </div>
+
+            <div class="promotion-text">
+                <h4>Want to know more about us? Play our</h4>
+                <h2>PROMOTIONAL VIDEO NOW!</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt hic repellendus aut sapiente aliquam sed quasi fugit doloribus sint delectus? Maxime officia, excepturi consequatur ut amet deleniti aut ab. Culpa?</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem nihil alias impedit corporis nisi quis deserunt officiis obcaecati! Repudiandae, perferendis!</p>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section id="testimonial">
+            <div class="container">
+                <div class="testimonial-cards">
+                    <div class="testimonial fade">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="user" />
+                        </div>
+                        <h3>Alex Snow</h3>
+                        <h4>Manager</h4>
+                        <p class="star"><img src="icons/star_18dp.svg" alt=""><img src="icons/star_18dp.svg" alt=""><img src="icons/star_18dp.svg" alt=""><img src="icons/star_18dp.svg" alt=""><img src="icons/star_18dp.svg" alt=""></p>
+                        <p style="border-bottom: 1px solid #F2F2F2;"></p>
+                        <div class="testimonial-body">
+                            <h4>Thousands of Customer Behind Our Success</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi doloremque quidem dolorum itaque quas reiciendis qui libero assumenda, illo in.
+                            </p>
+                            <img src="icons/format_quote_white_24dp.svg" class="fa-quote-right" alt="">
+                        </div>
+                    </div>
+
+                    <div class="testimonial fade">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="user" />
+                        </div>
+                        <h3>Alex Snow</h3>
+                        <h4>Manager</h4>
+                        <p class="star"><img src="icons/star_18dp.svg" alt=""><img src="icons/star_18dp.svg" alt=""><img src="icons/star_18dp.svg" alt=""><img src="icons/star_18dp.svg" alt=""><img src="icons/star_18dp.svg" alt=""></p>
+                        <p style="border-bottom: 1px solid #F2F2F2;"></p>
+                        <div class="testimonial-body">
+                            <h4>Thousands of Customer Behind Our Success</h4>
+                            <p>
+                                Lorem ipsum 2dolor sit amet, consectetur adipisicing elit. Quasi doloremque quidem dolorum itaque quas reiciendis qui libero assumenda, illo in.
+                            </p>
+                            <img src="icons/format_quote_white_24dp.svg" class="fa-quote-right" alt="">
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-container">
+                        <div class="stat-icon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3><span style="color: #DB2D2E;">578+</span> Vehicles in Stock</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="stat-container">
+                        <div class="stat-icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3><span style="color: #DB2D2E;">856+</span> Satisfied Customer</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="stat-container">
+                        <div class="stat-icon">
+                            <i class="fa fa-commenting-o"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3><span style="color: #DB2D2E;">568+</span> Dealer Reviews</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="stat-container">
+                        <div class="stat-icon">
+                            <i class="fa fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3><span style="color: #DB2D2E;">968+</span> Certifications Hold</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news">
+            <div class="container">
+                <div class="news-heading">
+                    <h5>Read our latest news</h5>
+                    <h1>LATEST NEWS</h1>
+                </div>
+                <div class="news-cards">
+                    <div>
+                        <div class="news-card">
+                            <img class="image" src="images/persons.jpg" alt="">
+                            <div class="date-section">
+                                <span class="date">27</span><br>
+                                <span class="month">Oct</span>
+                            </div>
+        
+                            <div class="news-info">
+                                <h2 class="news-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                                <p class="time"><img src="icons/schedule_black_18dp.svg" alt=""> 9:00am to 2:00pm &nbsp;&nbsp; <img src="icons/place_black_18dp.svg" alt=""> Hilton Quebec</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel numquam architecto repudiandae inventore blanditiis iusto rem nobis reprehenderit quasi similique nam commodi vitae veritatis maiores iure, rerum obcaecati quaerat perspiciatis? </p>
+                                <button class="red-btn" style="margin-top: 10px;">VIEW MORE</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="news-card">
+                            <img class="image" src="images/persons.jpg" alt="">
+                            <div class="date-section">
+                                <span class="date">27</span><br>
+                                <span class="month">Oct</span>
+                            </div>
+        
+                            <div class="news-info">
+                                <h2 class="news-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                                <p class="time"><img src="icons/schedule_black_18dp.svg" alt=""> 9:00am to 2:00pm &nbsp;&nbsp; <img src="icons/place_black_18dp.svg" alt=""> Hilton Quebec</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel numquam architecto repudiandae inventore blanditiis iusto rem nobis reprehenderit quasi similique nam commodi vitae veritatis maiores iure, rerum obcaecati quaerat perspiciatis? </p>
+                                <button class="red-btn" style="margin-top: 10px;">VIEW MORE</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="news-card">
+                            <img class="image" src="images/persons.jpg" alt="">
+                            <div class="date-section">
+                                <span class="date">27</span><br>
+                                <span class="month">Oct</span>
+                            </div>
+        
+                            <div class="news-info">
+                                <h2 class="news-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                                <p class="time"><img src="icons/schedule_black_18dp.svg" alt=""> 9:00am to 2:00pm &nbsp;<img src="icons/place_black_18dp.svg" alt=""> Hilton Quebec</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel numquam architecto repudiandae inventore blanditiis iusto rem nobis reprehenderit quasi similique nam commodi vitae veritatis maiores iure, rerum obcaecati quaerat perspiciatis? </p>
+                                <button class="red-btn" style="margin-top: 10px;">VIEW MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container row">
+            <div class="blockquote">
+                <div class="card" style="margin-bottom: 30px;">
+                    <h2>ARE YOU LOOKING FOR A CAR?</h2>
+                    <p>Search your car in our Inventory and request a quote on the vehicle of your choosing.</p>
+                    <img style="float: right;" src="images/black-car-picture-1.png" alt="">
+                </div>
+                <div class="card">
+                    <h2>DO YOU WANT TO SELL YOUR CAR?</h2>
+                    <p>Request search your car in our Inventory and a quote on the vehicle of your choosing.</p>
+                    <img src="images/6-2-car-png-file.png" alt="">
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Get in touch by filling the form below</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ut eaque, optio modi nemo esse quod blanditiis unde nesciunt quisquam.</p>
+                <form action="">
+                    <input type="text" placeholder="Enter your name">
+                    <input type="text" placeholder="Your email address">
+                    <input type="text" placeholder="Contact No">
+                    <input type="text" placeholder="Date & Time for call">
+                    <textarea name="" id="" placeholder="Message"></textarea>
+                    <input type="submit" value="Send Request" class="red-btn">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-details">
+            <div class="container">
+                <div class="footer-box">
+                    <h4>LOGO</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, eius!</p>
+                    <h5><a href=""><img src="icons/location_18dp.svg" alt=""> 123 round hall Paris</a></h5>
+                    <h5><a href=""><img src="icons/phone_18dp.svg" alt=""> (+1) 123 456 7890</a></h5>
+                    <h5><a href=""><img src="icons/email_18dp.svg" alt=""> email@admin.com</a></h5>
+                </div>
+                <div class="footer-box">
+                    <h4>USEFUL LINKS</h4>
+                    <ul>
+                        <li><a href=""> > Change Oil and Filter</a></li>
+                        <li><a href=""> > Brake Pads Replacement</a></li>
+                        <li><a href=""> > Timing BeltReplacement</a></li>
+                        <li><a href=""> > Pre-purchase Car Inspection</a></li>
+                        <li><a href=""> > Starter Replacement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4>MY ACCOUNT</h4>
+                    <ul>
+                        <li><a href=""> > My Orders</a></li>
+                        <li><a href=""> > My account</a></li>
+                        <li><a href=""> > My credit slips</a></li>
+                        <li><a href=""> > My addresses</a></li>
+                        <li><a href=""> > My personal info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4>SUBSCRIBE OUR NEWSLETTER</h4>
+                    <form action="">
+                        <input type="text" placeholder="Enter your e-mail">
+                        <button type="submit" class="subscribe-btn">SUBSCRIBE</button>
+                    </form>
+                    <div class="social-section">
+                        <h5>Follow Us</h5>
+                        <div class="social-links">
+                            <a href=""><img src="icons/facebook.png" alt=""></a>
+                            <a href=""><img src="icons/twitter.png" alt=""></a>
+                            <a href=""><img src="icons/youtube.png" alt=""></a>
+                            <a href=""><img src="icons/google-plus.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-footer">
+            copyright &copy; demo. All Rights Reserved
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.news-cards').slick({
+            autoplay: true,
+            autopalySpeed: 2000,
+            arrows:false,
+            dots:true,
+            
+        });
+        $('.slideshow').slick({
+            arrows:false,
+            autoplay:true,
+            autopalySpeed: 2000,
+            infinite:true,
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

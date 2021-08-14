@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(248, 248, 159);
+}
+.container{
+    width: 500px;
+    height: 280px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: auto;
+    top: 75px;
+    position: relative;
+    background: rgb(253, 175, 86);
+    color: #fff;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+}
+h3{
+    text-align: center;
+    padding-bottom: 10px;
+}
+#timer{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+.btn{
+    text-align: center;
+    padding: 25px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 3px;
+    border: none;
+    background: rgb(255, 238, 0);
+    color: rgb(145, 144, 144);
+    cursor: pointer;
+    outline: none;
+}
+button:active{
+    background: #fff;
+    color: black;
+}
+footer{
+    margin-top: 70px;
+    padding: 20px;
+    text-align: center;
+}
+footer p{
+    padding: 2px;
+}
+footer a{
+    color: rgb(96, 164, 228);
+}

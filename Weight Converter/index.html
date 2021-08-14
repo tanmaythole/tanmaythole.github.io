@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weight Converter</h1>
+        <select id="wt">
+            <option value="kg">Kg</option>
+            <option value="gm">Grams</option>
+            <option value="tonne">tonne</option>
+            <option value="pound">Pound</option>
+        </select>
+        <input type="number" id="wtvalue" placeholder="Enter Weight...">
+        <div id="output">
+            <div class="card kg">
+                <h4>Kilograms:</h4>
+                <p id="kg-output"></p>
+            </div>
+            <div class="card gm">
+                <h4>Grams:</h4>
+                <p id="gm-output"></p>
+            </div>
+            <div class="card tn">
+                <h4>Tonne:</h4>
+                <p id="tn-output"></p>
+            </div>
+            <div class="card pd">
+                <h4>Pound:</h4>
+                <p id="pd-output"></p>
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        <p>Created by <b>Tanmay Thole</b>.</p>
+        <p>Follow Me : <a href="https://www.instagram.com/tanmay_v_thole"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/tanmaythole45/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.twitter.com/tanmay_v_thole"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/tanmay-thole-b82978175/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
+</footer>
+    <script>
+        document.getElementById("output").style.visibility="hidden";
+
+        document.getElementById("wt").addEventListener('change', function(){
+            document.getElementById("output").style.visibility="hidden";
+            document.getElementById("wtvalue").value="";
+        });
+
+        document.getElementById("wtvalue").addEventListener('input',function(e){
+            let wt_type=document.getElementById("wt");
+
+            if(wt_type.value==="kg"){
+                document.getElementById("output").style.visibility="visible";
+                let kg=e.target.value;
+                document.getElementById("kg-output").innerHTML=kg*1;
+                document.getElementById("gm-output").innerHTML=kg*1000;
+                document.getElementById("tn-output").innerHTML=kg/1000;
+                document.getElementById("pd-output").innerHTML=kg*2.20462;
+            }
+            else if(wt_type.value==="gm"){
+                document.getElementById("output").style.visibility="visible";
+                let gm=e.target.value;
+                document.getElementById("kg-output").innerHTML=gm*1000;
+                document.getElementById("gm-output").innerHTML=gm*1;
+                document.getElementById("tn-output").innerHTML=gm/1000000;
+                document.getElementById("pd-output").innerHTML=gm*2.20462/1000;
+                
+            }
+            else if(wt_type.value==="tonne"){
+                document.getElementById("output").style.visibility="visible";
+                let tonne=e.target.value;
+                document.getElementById("kg-output").innerHTML=tonne*1000;
+                document.getElementById("gm-output").innerHTML=tonne*1000000;
+                document.getElementById("tn-output").innerHTML=tonne*1;
+                document.getElementById("pd-output").innerHTML=tonne*2.20462*1000;
+            }
+            else if(wt_type.value==="pound"){
+                document.getElementById("output").style.visibility="visible";
+                let pound=e.target.value;
+                document.getElementById("kg-output").innerHTML=pound/2.20462;
+                document.getElementById("gm-output").innerHTML=pound*1000/2.20462;
+                document.getElementById("tn-output").innerHTML=pound/2204.62;
+                document.getElementById("pd-output").innerHTML=pound*1;
+            }
+            
+        });
+    </script>
+</body>
+</html>

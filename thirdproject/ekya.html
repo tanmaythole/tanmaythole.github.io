@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ऐक्य</title>
+</head>
+
+<body class="alert-secondary">
+    <div class="container bg-light col-md-5 py-3 text-center px-0 shadow-lg" id="home">
+        <div class="nav">
+            <img src="images/logo.png" alt=""> 
+            <h1 class="heading">ब्रह्म राष्ट्र एकम</h1>
+        </div>
+        <hr>
+
+        <!-- Form  -->
+        <div class="form-container">
+            <h6 style="width: 80%;" class="text-center m-auto">हम आपका संरक्षण पाकर गौरवान्वित होंगे। कृपया निम्न विवरण भर कर सबमिट करें और हमारे माननीय संरक्षक बनें।</h6>
+            <hr>
+            <form action="" class="text-left">
+                <div class="form-group">
+                    <label for="name">आपका शुभ नाम <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="आपका नाम" required>
+                </div>
+                <div class="form-group">
+                    <label for="motherName">पूज्य माता जी का शुभ नाम <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="motherName" id="motherName" placeholder="माता जी का नाम" required>
+                </div>
+                <div class="form-group">
+                    <label for="fatherName">पूज्य पिता जी का शुभ नाम <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" name="fatherName" id="fatherName" placeholder="पिता जी का नाम" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">आपके जन्म की शुभ तिथि <span style="color: red;">*</span></label>
+                    <input type="date" class="form-control" name="dob" id="dob" placeholder="" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">लिंग <span style="color: red;">*</span></label>
+                    <select name="gender" id="gender" class="form-control" required>
+                        <option value="0" selected disabled>--कृपया चुनें--</option>
+                        <option value="male">पुरुष</option>
+                        <option value="female">महिला</option>
+                        <option value="other">अन्य</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">मोबाइल नम्बर<span style="color: red;">*</span></label>
+                    <input type="number" name="mobile" id="mobile" class="form-control" maxlength="10" minlength="10"
+                        placeholder="0000000000" required>
+                </div>
+                <div class="form-group">
+                    <label for="wapp">वॉट्सऐप नम्बर</label>
+                    <input type="number" name="wapp" id="wapp" class="form-control" maxlength="10" minlength="10"
+                        placeholder="0000000000">
+                    <small class="text-muted">अगर मोबाइल नम्बर से अलग है।</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">ईमेल आइडी <span style="color: red;">*</span></label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="ईमेल" required>
+                    <small class="text-muted">सही ईमेल आइडी लिखें। आपका ज्वाइनिंग पत्र इसी ईमेल आइडी पर जाएगा।</small>
+                </div>
+                <div class="form-group">
+                    <label for="workprofession">वर्तमान कार्यक्षेत्र <span style="color: red;">*</span></label>
+                    <select name="workprofession" id="workprofession" class="form-control" required>
+                        <option value="" selected disabled>--कृपया चुनें--</option>
+                        <option value="Currently Not Working">वर्तमान में कार्यरत नहीं</option>
+                        <option value="Homemaker">गृहस्थ</option>
+                        <option value="Farmer">किसान</option>
+                        <option value="Purohit &amp; Astrologers">पुरोहित एवं ज्योतिष</option>
+                        <option value="Student">विद्यार्थी</option>
+                        <option value="Sports  &amp; Athletics">क्रीड़ा एवं दौड़-कूद</option>
+                        <option value="News &amp; Media">समाचार एवं मीडिया</option>
+                        <option value="Law &amp; Legal">क़ानून एवं विधिक</option>
+                        <option value="Health &amp; Medical">स्वास्थ्य एवं चिकित्सा</option>
+                        <option value="Military &amp; Police">सेना एवं पुलिस</option>
+                        <option value="Education &amp; Teaching">शिक्षा एवं शिक्षण</option>
+                        <option value="Culture, Arts &amp; Literature">संस्कृति, कला एवं साहित्य</option>
+                        <option value="Business &amp; Self-Employed">व्यापार एवं स्व-नियोजित</option>
+                        <option value="Social Work &amp; Politics">समाज सेवा एवं राजनीति</option>
+                        <option value="Hawker, Labour &amp; Daily Wage">फेरी, मज़दूर एवं दैनिक आय</option>
+                        <option value="Probation &amp; Part time">संविदा एवं अंश काल</option>
+                        <option value="Driver, Househelp &amp; Husbandry">वाहन चालक, घरेलू सेवा &amp; पशुपालक</option>
+                        <option value="Private Service">ग़ैर-सरकारी सेवा</option>
+                        <option value="Government Service">सरकारी सेवा</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="aboutProfession">अपने कार्यक्षेत्र के बारे में लिखकर बताएँ</label>
+                    <textarea class="form-control" name="aboutProfession" id="aboutProfession" rows="3"
+                        placeholder="यहाँ लिखें..."></textarea>
+                </div>
+
+                <h6 class="pt-4">पूरा पता</h6>
+                <hr>
+                <div class="form-group">
+                    <label for="village">गाँव / प्लॉट / मकान / फ़्लैट <span style="color: red;">*</span></label>
+                    <input type="text" name="village" id="village" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="area">ब्लॉक/ मोहल्ला / सड़क / क्षेत्र <span style="color: red;">*</span></label>
+                    <input type="text" name="area" id="area" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">तहसील / शहर <span style="color: red;">*</span></label>
+                    <input type="text" name="city" id="city" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="district">जिला <span style="color: red;">*</span></label>
+                    <input type="text" name="district" id="district" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">राज्य/यूटी <span style="color: red;">*</span></label>
+                    <select name="state" id="state" class="form-control" required>
+                        <option value="" selected disabled>--कृपया चुनें--</option>
+                        <option value="none">नीचे में से कोई नहीं</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh आंध्र प्रदेश</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands अंडमान व नोकोबार द्वीप समूह</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh अरुणाचल प्रदेश</option>
+                        <option value="Assam">Assam असम</option>
+                        <option value="Bihar">Bihar बिहार</option>
+                        <option value="Chandigarh">Chandigarh चण्डीगढ़</option>
+                        <option value="Chhattisgarh">Chhattisgarh छत्तीसगढ़</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli दादरा और नगर हवेली</option>
+                        <option value="Daman and Diu">Daman and Diu दमन और दीव</option>
+                        <option value="Delhi">Delhi दिल्ली</option>
+                        <option value="Lakshadweep">Lakshadweep लक्षद्वीप</option>
+                        <option value="Puducherry">Puducherry पुडुचेरी</option>
+                        <option value="Goa">Goa गोवा</option>
+                        <option value="Gujarat">Gujarat गुजरात</option>
+                        <option value="Haryana">Haryana हरियाणा</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh हिमाचल प्रदेश</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir जम्मू-कश्मीर</option>
+                        <option value="Jharkhand">Jharkhand झारखंड</option>
+                        <option value="Karnataka">Karnataka कर्नाटक</option>
+                        <option value="Kerala">Kerala केरल</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh मध्य प्रदेश</option>
+                        <option value="Maharashtra">Maharashtra महाराष्ट्र</option>
+                        <option value="Manipur">Manipur मणिपुर</option>
+                        <option value="Meghalaya">Meghalaya मेघालय</option>
+                        <option value="Mizoram">Mizoram मिजोरम</option>
+                        <option value="Nagaland">Nagaland नागालैंड</option>
+                        <option value="Odisha">Odisha ओडिशा</option>
+                        <option value="Punjab">Punjab पंजाब</option>
+                        <option value="Rajasthan">Rajasthan राजस्थान</option>
+                        <option value="Sikkim">Sikkim सिक्किम</option>
+                        <option value="Tamil Nadu">Tamil Nadu तमिलनाडु</option>
+                        <option value="Telangana">Telangana तेलंगाना</option>
+                        <option value="Tripura">Tripura त्रिपुरा</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh उत्तर प्रदेश</option>
+                        <option value="Uttarakhand">Uttarakhand उत्तराखंड</option>
+                        <option value="West Bengal">West Bengal पश्चिम बंगाल</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="country">राष्ट्र <span style="color: red;">*</span></label>
+                    <select name="country" id="country" class="form-control" required>
+                        <option value="Afganistan">Afghanistan अफ़ग़ानिस्तान</option>
+                        <option value="Albania">Albania अल्बानिया</option>
+                        <option value="Algeria">Algeria एलजीरिया</option>
+                        <option value="American Samoa">American Samoa अमेरिकन समोआ</option>
+                        <option value="Andorra">Andorra एंडोरा</option>
+                        <option value="Angola">Angola अंगोला</option>
+                        <option value="Anguilla">Anguilla एंगुइला</option>
+                        <option value="Antigua & Barbuda">Antigua & Barbuda एंटिगुआ और बारबुडा</option>
+                        <option value="Argentina">Argentina अर्जेंटीना</option>
+                        <option value="Armenia">Armenia अर्मेनिआ</option>
+                        <option value="Aruba">Aruba अरूबा</option>
+                        <option value="Australia">Australia ऑस्ट्रेलिया</option>
+                        <option value="Austria">Austria ऑस्ट्रिया</option>
+                        <option value="Azerbaijan">Azerbaijan आज़रबाइजान</option>
+                        <option value="Bahamas">Bahamas बहमास</option>
+                        <option value="Bahrain">Bahrain बहरीन</option>
+                        <option value="Bangladesh">Bangladesh बांग्लादेश</option>
+                        <option value="Barbados">Barbados बारबाडोस</option>
+                        <option value="Belarus">Belarus बेलोरूस</option>
+                        <option value="Belgium">Belgium बेल्जियम</option>
+                        <option value="Belize">Belize बेलीज</option>
+                        <option value="Benin">Benin बेनिन</option>
+                        <option value="Bermuda">Bermuda बरमूडा</option>
+                        <option value="Bhutan">Bhutan भूटान</option>
+                        <option value="Bolivia">Bolivia बोलीविया</option>
+                        <option value="Bonaire">Bonaire</option>
+                        <option value="Bosnia & Herzegovina">Bosnia & Herzegovina बोस्निया और हर्ज़िगोविना</option>
+                        <option value="Botswana">Botswana बोत्सवाना</option>
+                        <option value="Brazil">Brazil ब्राज़िल</option>
+                        <option value="British Indian Ocean Ter">British Indian Ocean Ter ब्रिटिश वर्जिन आइलैंड्स</option>
+                        <option value="Brunei">Brunei ब्रुनेई</option>
+                        <option value="Bulgaria">Bulgaria बुल्गारिया</option>
+                        <option value="Burkina Faso">Burkina Faso बुर्किना फासो</option>
+                        <option value="Burundi">Burundi बुरुंडी</option>
+                        <option value="Cambodia">Cambodia कंबोडिया</option>
+                        <option value="Cameroon">Cameroon कैमरून</option>
+                        <option value="Canada">Canada कनाडा</option>
+                        <option value="Cape Verde">Cape Verde केप वर्ड</option>
+                        <option value="Cayman Islands">Cayman Islands केमैन द्वीप</option>
+                        <option value="Central African Republic">Central African Republic मध्य अफ्रीकी गणराज्य</option>
+                        <option value="Chad">Chad चाड</option>
+                        <option value="Chile">Chile चिली</option>
+                        <option value="China">China चीन</option>
+                        <option value="Colombia">Colombia कोलंबिया</option>
+                        <option value="Comoros">Comoros कोमरोस</option>
+                        <option value="Congo">Congo कांगो</option>
+                        <option value="Costa Rica">Costa Rica कोस्टा रिका</option>
+                        <option value="Cote DIvoire">Cote DIvoire कोटे डी आइवर</option>
+                        <option value="Croatia">Croatia क्रोएशिया</option>
+                        <option value="Cuba">Cuba क्यूबा</option>
+                        <option value="Curaco">Curacao कुराकाओ</option>
+                        <option value="Cyprus">Cyprus सायप्रस</option>
+                        <option value="Czech Republic">Czech Republic चेक गणराज्य</option>
+                        <option value="Denmark">Denmark डेनमार्क</option>
+                        <option value="Djibouti">Djibouti जिबोटी</option>
+                        <option value="Dominica">Dominica डॉमिनिका</option>
+                        <option value="Dominican Republic">Dominican Republic डोमिनिका गणराज्य</option>
+                        <option value="East Timor">East Timor पूर्वी तिमोर</option>
+                        <option value="Ecuador">Ecuador इक्वेडोर</option>
+                        <option value="Egypt">Egypt मिस्र</option>
+                        <option value="El Salvador">El Salvador अल सल्वाडोर</option>
+                        <option value="Equatorial Guinea">Equatorial Guinea इक्वेटोरियल गिनी</option>
+                        <option value="Eritrea">Eritrea इरीट्रिया</option>
+                        <option value="Estonia">Estonia एस्तोनिया</option>
+                        <option value="Ethiopia">Ethiopia इथियोपिया</option>
+                        <option value="Falkland Islands">Falkland Islands फ़ॉकलैंड द्वीप</option>
+                        <option value="Faroe Islands">Faroe Islands फ़ैरो आइलैंड्स</option>
+                        <option value="Fiji">Fiji फिजी</option>
+                        <option value="Finland">Finland फ़िनलैंड</option>
+                        <option value="France">France फ्रांस</option>
+                        <option value="French Guiana">French Guiana फ़्रेंच गयाना</option>
+                        <option value="French Polynesia">French Polynesia फ़्रेंच पोलिनेशिया</option>
+                        <option value="Gabon">Gabon गैबन</option>
+                        <option value="Gambia">Gambia जाम्बिया</option>
+                        <option value="Georgia">Georgia जॉर्जिया</option>
+                        <option value="Germany">Germany जर्मनी</option>
+                        <option value="Ghana">Ghana घाना</option>
+                        <option value="Gibraltar">Gibraltar जिब्राल्टर</option>
+                        <option value="Greece">Greece ग्रीस</option>
+                        <option value="Greenland">Greenland ग्रीनलैंड</option>
+                        <option value="Grenada">Grenada ग्रेनेडा</option>
+                        <option value="Guadeloupe">Guadeloupe ग्वाडेलोप	</option>
+                        <option value="Guatemala">Guatemala ग्वाटेमाला</option>
+                        <option value="Guinea">Guinea गिनी</option>
+                        <option value="Guyana">Guyana गिनी – बिसाऊ</option>
+                        <option value="Haiti">Haiti हैती</option>
+                        <option value="Hawaii">Hawaii हवाई</option>
+                        <option value="Honduras">Honduras होंडुरस</option>
+                        <option value="Hong Kong">Hong Kong हांगकांग</option>
+                        <option value="Hungary">Hungary हंगरी</option>
+                        <option value="Iceland">Iceland आइसलैंड</option>
+                        <option value="Indonesia">Indonesia इंडोनेशिया</option>
+                        <option value="India" selected>India भारत</option>
+                        <option value="Iran">Iran ईरान </option>
+                        <option value="Iraq">Iraq इराक</option>
+                        <option value="Ireland">Ireland आयरलैंड</option>
+                        <option value="Israel">Israel इजराइल</option>
+                        <option value="Italy">Italy इटली</option>
+                        <option value="Jamaica">Jamaica जमैका</option>
+                        <option value="Japan">Japan जापान</option>
+                        <option value="Jordan">Jordan जॉर्डन</option>
+                        <option value="Kazakhstan">Kazakhstan कजाखस्तान</option>
+                        <option value="Kenya">Kenya केन्या</option>
+                        <option value="Kiribati">Kiribati किरबाती</option>
+                        <option value="Korea North">Korea North उत्तर कोरिया</option>
+                        <option value="Korea Sout">Korea South दक्षिण कोरिया</option>
+                        <option value="Kuwait">Kuwait कुवैत</option>
+                        <option value="Kyrgyzstan">Kyrgyzstan किर्गिस्तान</option>
+                        <option value="Laos">Laos लाओस</option>
+                        <option value="Latvia">Latvia लाटविया</option>
+                        <option value="Lebanon">Lebanon लेबनान</option>
+                        <option value="Lesotho">Lesotho लेसोथो</option>
+                        <option value="Liberia">Liberia लाइबेरिया</option>
+                        <option value="Libya">Libya लिबया</option>
+                        <option value="Liechtenstein">Liechtenstein लिचेंस्टीन</option>
+                        <option value="Lithuania">Lithuania लिथुआनिया</option>
+                        <option value="Luxembourg">Luxembourg लक्ज़मबर्ग</option>
+                        <option value="Macau">Macau मकाउ</option>
+                        <option value="Macedonia">Macedonia मैसेडोनिया</option>
+                        <option value="Madagascar">Madagascar मेडागास्कर</option>
+                        <option value="Malaysia">Malaysia मलेशिया</option>
+                        <option value="Malawi">Malawi मलावी</option>
+                        <option value="Maldives">Maldives मालदीव</option>
+                        <option value="Mali">Mali माली</option>
+                        <option value="Malta">Malta माल्टा</option>
+                        <option value="Martinique">Martinique मार्टीनिक</option>
+                        <option value="Mauritania">Mauritania मॉरिटानिया</option>
+                        <option value="Mauritius">Mauritius मॉरीशस</option>
+                        <option value="Mayotte">Mayotte मायोटी</option>
+                        <option value="Mexico">Mexico मेक्सिको</option>
+                        <option value="Moldova">Moldova मोल्दोवा</option>
+                        <option value="Monaco">Monaco मोनाको</option>
+                        <option value="Mongolia">Mongolia मंगोलिया</option>
+                        <option value="Morocco">Morocco मोरक्को</option>
+                        <option value="Mozambique">Mozambique मोज़ाम्बिक</option>
+                        <option value="Myanmar">Myanmar म्यांमार</option>
+                        <option value="Nambia">Nambia नामीबिया</option>
+                        <option value="Nauru">Nauru नाउरू</option>
+                        <option value="Nepal">Nepal नेपाल</option>
+                        <option value="Netherland Antilles">Netherland Antilles नीदरलैंड एंटाइल्स</option>
+                        <option value="Netherlands">Netherlands नीदरलैंड</option>
+                        <option value="Nevis">Nevis नेविस</option>
+                        <option value="New Caledonia">New Caledonia न्यू कैलेडोनिया</option>
+                        <option value="New Zealand">New Zealand न्यूजीलैंड</option>
+                        <option value="Nicaragua">Nicaragua निकारागुआ</option>
+                        <option value="Niger">Niger नाइजर</option>
+                        <option value="Nigeria">Nigeria नाइजीरिया</option>
+                        <option value="Norfolk Island">Norfolk Island नोरफ़ॉल्क द्वीप</option>
+                        <option value="Norway">Norway नॉर्वे</option>
+                        <option value="Oman">Oman ओमान</option>
+                        <option value="Pakistan">Pakistan पाकिस्तान</option>
+                        <option value="Palau Island">Palau Island पलाऊ</option>
+                        <option value="Palestine">Palestine पॅलेस्टाईन</option>
+                        <option value="Panama">Panama पनामा</option>
+                        <option value="Papua New Guinea">Papua New Guinea पापुआ न्यू गिनीआ</option>
+                        <option value="Paraguay">Paraguay पैराग्वे</option>
+                        <option value="Peru">Peru पेरू</option>
+                        <option value="Phillipines">Philippines फ़िलिपींस</option>
+                        <option value="Pitcairn Island">Pitcairn Island पिटकेर्न द्वीप</option>
+                        <option value="Poland">Poland पोलैंड</option>
+                        <option value="Portugal">Portugal पुर्तगाल</option>
+                        <option value="Puerto Rico">Puerto Rico पोर्टो रीको</option>
+                        <option value="Qatar">Qatar क़तर</option>
+                        <option value="Republic of Montenegro">Republic of Montenegro मोंटेनेग्रो गणराज्य</option>
+                        <option value="Republic of Serbia">Republic of Serbia सर्बिया गणराज्य</option>
+                        <option value="Romania">Romania रोमानिया</option>
+                        <option value="Russia">Russia रूस</option>
+                        <option value="Rwanda">Rwanda रवांडा</option>
+                        <option value="St Barthelemy">St Barthelemy सेंट बार्थेलेमी</option>
+                        <option value="St Eustatius">St Eustatius सेंट यूस्टेटियस</option>
+                        <option value="St Helena">St Helena सेंट हेलेना</option>
+                        <option value="St Kitts-Nevis">St Kitts-Nevis सैंत किट्स एंड नेविस</option>
+                        <option value="St Lucia">St Lucia सेंट लूसिया</option>
+                        <option value="St Pierre & Miquelon">St Pierre & Miquelon सेंट पियरे और मिकेलॉन</option>
+                        <option value="St Vincent & Grenadines">St Vincent & Grenadines सेंट विंसेंट और ग्रेनेडाइंस</option>
+                        <option value="Samoa">Samoa सामोआ</option>
+                        <option value="San Marino">San Marino सैन मारिनो</option>
+                        <option value="Sao Tome & Principe">Sao Tome & Principe साओ टोम और प्रिंसिपे</option>
+                        <option value="Saudi Arabia">Saudi Arabia सऊदी अरब</option>
+                        <option value="Senegal">Senegal सेनेगल</option>
+                        <option value="Sierra Leone">Sierra Leone सिएरा लियोन</option>
+                        <option value="Singapore">Singapore सिंगापुर</option>
+                        <option value="Slovakia">Slovakia स्लोवाकिया</option>
+                        <option value="Slovenia">Slovenia स्लोवेनिया</option>
+                        <option value="Solomon Islands">Solomon Islands सोलोमन आइलैंड्स</option>
+                        <option value="Somalia">Somalia सोमालिया</option>
+                        <option value="South Africa">South Africa दक्षिण अफ्रीका</option>
+                        <option value="Spain">Spain स्पेन</option>
+                        <option value="Sri Lanka">Sri Lanka श्रीलंका</option>
+                        <option value="Sudan">Sudan सूडान</option>
+                        <option value="Suriname">Suriname सूरीनाम</option>
+                        <option value="Swaziland">Swaziland स्वाज़ीलैंड</option>
+                        <option value="Sweden">Sweden स्वीडन</option>
+                        <option value="Switzerland">Switzerland स्विजरलैंड</option>
+                        <option value="Syria">Syria सीरिया</option>
+                        <option value="Tahiti">Tahiti ताहिती</option>
+                        <option value="Taiwan">Taiwan ताइवान</option>
+                        <option value="Tajikistan">Tajikistan ताजीकिस्तान</option>
+                        <option value="Tanzania">Tanzania तंजानिया</option>
+                        <option value="Thailand">Thailand थाईलैंड</option>
+                        <option value="Togo">Togo टोगो</option>
+                        <option value="Tokelau">Tokelau टोकेलाऊ</option>
+                        <option value="Tonga">Tonga टोंगा</option>
+                        <option value="Trinidad & Tobago">Trinidad & Tobago ट्रिनिडाड और टोबैगो</option>
+                        <option value="Tunisia">Tunisia ट्यूनीशिया</option>
+                        <option value="Turkey">Turkey टर्की	</option>
+                        <option value="Turkmenistan">Turkmenistan तुर्कमेनिस्तान</option>
+                        <option value="Tuvalu">Tuvalu टवालू</option>
+                        <option value="Uganda">Uganda यूगांडा</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Ukraine">Ukraine यूक्रेन</option>
+                        <option value="United Arab Erimates">United Arab Emirates संयुक्त अरब अमीरात</option>
+                        <option value="United States of America">United States of America संयुक्त राज्य अमेरिका</option>
+                        <option value="Uraguay">Uruguay उरुग्वे</option>
+                        <option value="Uzbekistan">Uzbekistan उज़्बेकिस्तान</option>
+                        <option value="Vanuatu">Vanuatu वानातू</option>
+                        <option value="Venezuela">Venezuela वेनेज़ुएला</option>
+                        <option value="Vietnam">Vietnam वियतनाम</option>
+                        <option value="Wake Island">Wake Island वेक द्वीप</option>
+                        <option value="Yemen">Yemen यमन</option>
+                        <option value="Zaire">Zaire ज़ैरे</option>
+                        <option value="Zambia">Zambia ज़ाम्बिया</option>
+                        <option value="Zimbabwe">Zimbabwe ज़िम्बाब्वे</option>
+                    </select>
+                </div>
+                <hr>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" name="checkbox" id="checkbox" required>
+                    <label for="checkbox" class="form-check-label text-muted">मैं ओ३म् श्री से जुड़े सभी प्लाट्फ़ोर्म पर उपयोग एवं गोपनीयता नीति की शर्तों से सहमत हूँ और ओ३म् श्री के सभी अधिनियम, नीति, आचरण संहिता, नियम एवं शर्त मानते हुए जुड़ने को सहमत हूँ। मैं ओ३म् श्री और उसके सम्बद्ध, भागीदार, साझेदार, सहयोगी व्यक्ति एवं संस्थाओं आदि से समस्त माध्यमों सहित अपने पते और नम्बरों पर संचार प्राप्त करने के लिए सहमत हूँ। मेरे द्वारा दर्ज की गई सभी जानकारी सही है।</label>
+                </div>
+
+                <!-- Signature -->
+                
+                <div class="form-group">
+                    <label for="signature">हस्ताक्षर <span style="color: red;">*</span></label>
+                    <div id="SignatureController" class="form-control" required></div>
+                    <button type="button" class="clearSignature" id="clearSignature">Clear Signature</button>
+                </div>
+                
+                <br>
+
+                <input type="submit" value="सबमिट" class="btn">
+
+
+
+            </form>
+        </div>
+
+        <div>
+            <div class="change-lang pt-5">
+                <a href="index.html" class="nav-link text-dark">प्रथम पृष्ठ</a>
+                <a href="ekya-en.html" class="nav-link text-dark">English</a>
+            </div>
+            <div class="footer-link">
+                <p><a href="privacy.html">गोपनीयता नीति</a></p>
+                <p>|</p>
+                <p>ब्रह्म राष्ट्र एकम &copy; २०२१</p>
+                <p>|</p>
+                <p>सभी अधिकार सुरक्षित</p>
+                <p>|</p>
+                <p>उपयोग की शर्तें</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/brinley/jSignature/master/libs/jSignature.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        var dataString;
+            $("#SignatureController").jSignature({
+            'decor-color': 'transparent',
+            'lineWidth': 1,
+            });
+            $("#clearSignature").click(function(){
+            $("#SignatureController").jSignature("clear");
+            });
+        });
+    </script>
+</body>
+
+</html>

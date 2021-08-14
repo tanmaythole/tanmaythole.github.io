@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <h2>Create Account</h2>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="conpassword" placeholder="Confirm Password" required>
+            <div class="btn">
+                <button type="button" id="next1">Next</button>
+            </div>
+        </form>
+        <form id="form2">
+            <h2>Personal Details</h2>
+            <input type="text" id="firstname" placeholder="First Name" required>
+            <input type="text" id="lastname" placeholder="Last Name" required>
+            <input type="number" id="mobile" placeholder="Mobile No." required>
+            <div class="btn">
+                <button type="button" id="back1">Back</button>
+                <button type="button" id="next2">Next</button>
+            </div>
+        </form>
+        <form id="form3">
+            <h2>Social Links</h2>
+            <input type="url" id="" placeholder="Medium">
+            <input type="url" id="" placeholder="GitHub">
+            <input type="url" id="" placeholder="LinkedIn">
+            <div class="btn">
+                <button type="button" id="back2">Back</button>
+                <button type="submit" onclick="submitform()">Submit</button>
+            </div>
+        </form>
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col">Step1</div>
+            <div class="step-col">Step2</div>
+            <div class="step-col">Step3</div>
+        </div>
+    </div>
+    <footer>
+        <p>Created by <b>Tanmay Thole</b>.</p>
+        <p>Follow Me : <a href="https://www.instagram.com/tanmay_v_thole"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/tanmaythole45/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.twitter.com/tanmay_v_thole"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/tanmay-thole-b82978175/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
+</footer>
+    <script>
+        var form1=document.getElementById("form1");
+        var form2=document.getElementById("form2");
+        var form3=document.getElementById("form3");
+
+        var email=document.getElementById("email");
+        var password=document.getElementById("password");
+        var conpassword=document.getElementById("conpassword");
+
+        var firstname=document.getElementById("firstname");
+        var lastname=document.getElementById("lastname");
+        var number=document.getElementById("mobile");
+
+        var next1=document.getElementById("next1");
+        var back1=document.getElementById("back1");
+        var next2=document.getElementById("next2");
+        var back2=document.getElementById("back2");
+        var progress=document.getElementById("progress");
+
+        next1.onclick=function(){
+            if(email.value!="" && password.value!="" && conpassword.value!="" && password.value===conpassword.value){
+                form1.style.left="-450px";
+                form2.style.left="30px";
+                progress.style.width="214px";
+            }
+            else if(email.value===""){
+                alert("Enter Email");
+            }
+            else if(password.value===""){
+                alert("Enter Password");
+            }
+            else if(password.value!=conpassword.value)
+            {
+                alert("Password NOT Matched");
+            }
+        }
+        back1.onclick=function(){
+            form1.style.left="30px";
+            form2.style.left="450px";
+            progress.style.width="107px";
+        }
+        next2.onclick=function(){
+            if(firstname.value!="" && lastname.value!="" && number.value!=""){
+                form2.style.left="-450px";
+                form3.style.left="30px";
+                progress.style.width="320px";
+            }
+            else if(firstname.value===""){
+                alert("Enter First Name");
+            }
+            else if(lastname.value===""){
+                alert("Enter Last Name");
+            }
+            else if(number.value===""){
+                alert("Enter Mobile Number");
+            }
+        }
+        back2.onclick=function(){
+            form2.style.left="30px";
+            form3.style.left="450px";
+            progress.style.width="214px";
+        }
+    </script>
+</body>
+</html>

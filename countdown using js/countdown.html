@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="countdown.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Countdown to 2021</h1>
+        <div class="clock">
+            <div class="clock-section">
+                <div class="box"><p id="days">00</p></div>
+                <div class="label">DAYS</div>
+            </div>
+            <div class="clock-section">
+                <div class="box"><p id="hours">00</p></div>
+                <div class="label">HOURS</div>
+            </div>
+            <div class="clock-section">
+                <div class="box"><p id="mins">00</p></div>
+                <div class="label">MINUTES</div>
+            </div>
+            <div class="clock-section">
+                <div class="box"><p id="secs">00</p></div>
+                <div class="label">SECONDS</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Created by <b>Tanmay Thole</b>.</p>
+        <p>Follow Me : <a href="https://www.instagram.com/tanmay_v_thole"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/tanmaythole45/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.twitter.com/tanmay_v_thole"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/tanmay-thole-b82978175/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
+    </footer>
+    <script>
+        
+        var targetDate=new Date("1/1/2021");
+        setInterval(function(){
+            var presentDate=new Date();
+            var time_diff=(targetDate.getTime()-presentDate.getTime())/(1000);
+            updateTime(time_diff);
+        });
+        
+
+        function updateTime(time_diff){
+            var days=Math.floor(time_diff/86400);
+            time_diff-=days*86400;
+            var hrs=Math.floor(time_diff/3600)%24;
+            time_diff-=hrs*3600;
+            var mins=Math.floor(time_diff/60)%60;
+            time_diff-=mins*60;
+            var secs=Math.floor(time_diff)%60;
+
+            document.getElementById("days").innerText=days;
+            document.getElementById("hours").innerText=hrs;
+            document.getElementById("mins").innerText=mins;
+            document.getElementById("secs").innerText=secs;
+        }
+    </script>
+</body>
+</html>
