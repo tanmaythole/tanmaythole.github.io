@@ -5,7 +5,8 @@ window.addEventListener("load", vanish);
 function vanish() {
     loader.style.display = 'none';
     document.getElementById("begin_body").style.display = "block";
-}
+    AOS.init();
+  }
 
 
 const navbar=document.querySelector("nav");
@@ -64,7 +65,7 @@ function removesidebar(){
 
 // Typed text
 var typed = new Typed('.typed',{
-    strings: ['Engineer', 'Web Developer', 'Competitive Programmer','Full-Stack Enthusiast', 'Learner'],
+    strings: ['Engineer', 'Web Developer', 'Competitive Programmer','Full-Stack Enthusiast', 'Learner', 'Freelancer'],
     typeSpeed: 70,
     backSpeed: 20,
     loop: 1,
@@ -75,49 +76,6 @@ var typed = new Typed('.typed',{
 
 
 
-
-// ========================
-//     Scroll Animation
-// ========================
-
-// // from top
-// const sr = ScrollReveal({
-//     origin: 'top',
-//     distance: '70px',
-//     position: 'relative',
-//     duration: 1500,
-//     reset: false
-// })
-
-// sr.reveal('.container-info .seek, .container-info .name, .container-info .work', {})
-// sr.reveal('.container-info button', {delay: 200})
-// sr.reveal('.container-info .social-links a', {delay:300, interval:200})
-// sr.reveal('.container-info .pic', {delay: 400})
-
-
-// sr.reveal('.about .info p, .contact-desc h1, .contact-desc .seek, .contact-desc .contact-tagline', {interval:100})
-
-// sr.reveal('.project-boxes .box', {interval: 200})
-
-// sr.reveal('.skills h1, .projects h1, .skills h2', {})
-// sr.reveal('.skill', {interval:200})
-
-// from bottom
-// srbot = ScrollReveal({
-//     origin: 'bottom',
-//     distance: '80px',
-//     position: 'relative',
-//     duration: 1000,
-//     reset: true
-// })
-// srbot.reveal('.about .info p, .contact-desc h1, .contact-desc .seek, .contact-desc .contact-tagline', {interval:100})
-
-// srbot.reveal('.project-boxes .box', {interval: 200})
-
-// srbot.reveal('.skills h1, .projects h1, .skills h2', {})
-// srbot.reveal('.skill', {interval:200})
-// srbot.reveal('.form input, .form textarea, .form button',{interval:200})
-// srbot.reveal('.back-to-top-btn', {delay: 120})
 
 
 // // =========================
@@ -203,10 +161,10 @@ var modalInfo = {
   
   // open modal 
   for(let i = 0; i < btn.length; i++){
-      console.log(i)
+
     btn[i].addEventListener("click", function(e) {
       var project = btn[i].parentElement;
-      console.log(e);
+      
       openModal(project);
     })
   };

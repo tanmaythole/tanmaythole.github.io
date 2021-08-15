@@ -138,7 +138,7 @@ nav{
     font-size: bold;
     color: orange;
 }
-@media screen and (max-width:782px){
+@media screen and (max-width:942px){
     .bars{
         float: right;
         font-size: 30px;
@@ -156,7 +156,7 @@ nav{
     }
 }
 
-@media screen and (min-width:782px){
+@media screen and (min-width:942px){
     .bars{
         display: none;
     }
@@ -168,7 +168,6 @@ nav{
         float: left;
         display: flex;
         padding: 10px 15px;
-        margin: 0 8px;
     }
     .nav-link:hover{
         cursor: pointer;
@@ -479,9 +478,6 @@ Header
     width: 100%;
     color: #fff;
 }
-.projects .project-title p{
-    margin: auto;
-}
 .projects .project-title h1{
     font-size: 40px;
     padding: 10px;
@@ -610,7 +606,6 @@ border-color: #000000;
     padding: 25px;
     text-align: left;
     position: relative;
-    height: 264px;
     box-sizing: border-box;
     border-top: 1px solid #363638;
     background: #333;
@@ -626,7 +621,6 @@ border-color: #000000;
   }
   
   #details .button{
-    position: absolute;
     width: 30%;
     background-color: rgb(245, 175, 35);
     color: #F5F5F5;
@@ -652,8 +646,8 @@ border-color: #000000;
   
   /* Close Button */
   .close {
-    color: #aaa;
-    font-size: 28px;
+    color: red;
+    font-size: 35px;
     font-weight: bold;
     position: absolute;
     right: 10px;
@@ -661,7 +655,7 @@ border-color: #000000;
   
   .close:hover,
   .close:focus {
-    color: #363638;
+    color: rgb(158, 0, 0);
     text-decoration: none;
     cursor: pointer;
   }
@@ -807,6 +801,17 @@ border-color: #000000;
         height: 90px;
         text-align: center;
         margin: 10px;
+    }
+}
+@media screen and (max-width:442px) {
+    .skill{
+        width: 65px;
+        height: 65px;
+        text-align: center;
+        margin: 10px;
+    }
+    .skill h6{
+        font-size: 12px;
     }
 }
 

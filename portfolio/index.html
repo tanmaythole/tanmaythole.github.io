@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=KoHo&family=Montserrat&family=Pattaya&family=Roboto+Mono&display=swap"
         rel="stylesheet">
-    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <link rel="stylesheet" href="css/aos.css">
 </head>
 
 <body>
@@ -47,6 +47,9 @@
                             <a href="#projects">Projects</a>
                         </li>
                         <li class="nav-link">
+                            <a href="#blogs">Blogs</a>
+                        </li>
+                        <li class="nav-link">
                             <a href="#contact">Contact</a>
                         </li>
                     </ul>
@@ -75,6 +78,9 @@
                             <a href="#projects" onclick="removesidebar()">Projects</a>
                         </li>
                         <li class="nav-link">
+                            <a href="#blogs" onclick="removesidebar()">Blogs</a>
+                        </li>
+                        <li class="nav-link">
                             <a href="#contact" onclick="removesidebar()">Contact</a>
                         </li>
                     </ul>
@@ -92,7 +98,7 @@
         <header>
             <!-- Main -->
             <div class="container" id="main-header">
-                <div class="container-info">
+                <div class="container-info" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">
                     <article class="info">
                         <p class="seek"></p>
                         <h1 class="name">I'm Tanmay</h1>
@@ -112,7 +118,7 @@
             </div>
     
             <!-- About -->
-            <div class="about" id="about">
+            <div class="about" id="about"  data-aos="fade-right">
                 <div class="about-container">
                     <div class="title">
                         <p class="name">About Me</p>
@@ -142,7 +148,7 @@
                     <p class="tagline">What Can I do</p>
                 </div>
                 <div class="container">
-                    <div class="column">
+                    <div class="column" data-aos="fade-up" data-aos-duration="200">
                         <div class="services-img">
                             <img src="images/problem-solving.png" alt="">
                         </div>
@@ -153,7 +159,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="column">
+                    <div class="column" data-aos="fade-up" data-aos-duration="400">
                         <div class="services-img">
                             <img src="images/web_developement.png" alt="">
                         </div>
@@ -164,7 +170,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="column">
+                    <div class="column" data-aos="fade-up" data-aos-duration="600">
                         <div class="services-img">
                             <img src="images/web-designing.png" alt="">
                         </div>
@@ -183,6 +189,7 @@
                 <div class="project-title">
                     <h1>Projects</h1>
                     <p class="seek"></p>
+                    <p class="tagline">What I created</p>
                 </div>
     
                 <div class="container">
@@ -285,9 +292,9 @@
                 <div class="skills-title">
                     <h1>Skills</h1>
                     <p class="seek"></p>
-                    <p class="tagline">Whats I Know</p>
+                    <p class="tagline">What I Know</p>
                 </div>
-                <div class="container" id="skills-container">
+                <div class="container" id="skills-container" data-aos="fade-up-right">
                     <div class="row">
                         <div class="skill">
                             <img src="images/cpp.svg" alt="">
@@ -351,11 +358,11 @@
                 <div class="blogs-title">
                     <h1>Blogs</h1>
                     <p class="seek"></p>
-                    <p class="tagline">Whats I write while learning</p>
+                    <p class="tagline">What I write while learning</p>
                 </div>
                 <div class="container" id="blog-container">
                     <div class="row">
-                        <div class="blog">
+                        <div class="blog" data-aos="zoom-in" data-aos-duration="400">
                             <img src="images/gfg.png" alt="">
                             <div class="blog-info">
                                 <h5 class="blog-title">
@@ -367,7 +374,7 @@
                                 <a href="https://www.geeksforgeeks.org/how-to-print-colored-text-in-c/" class="blog-btn">View Blog</a>
                             </div>
                         </div>
-                        <div class="blog">
+                        <div class="blog" data-aos="zoom-in" data-aos-duration="800">
                             <img src="images/gfg.png" alt="">
                             <div class="blog-info">
                                 <h5 class="blog-title">
@@ -376,7 +383,7 @@
                                 <div class="blog-desc">
                                     It explains about how to find longest subarray for given condition.
                                 </div>
-                                <a href="https://www.geeksforgeeks.org/how-to-print-colored-text-in-c/" class="blog-btn">View Blog</a>
+                                <a href="https://www.geeksforgeeks.org/longest-subarray-with-difference-exactly-k-between-any-two-distinct-values/" class="blog-btn">View Blog</a>
                             </div>
                         </div>
                     </div>
@@ -390,7 +397,7 @@
                     <p class="seek"></p>
                     <p class="tagline">What Clients Thinks</p>
                 </div>
-                <div class="container" id="testimonials-container">
+                <div class="container" id="testimonials-container" data-aos="zoom-in-up" data-aos-duration="600">
                     <div class="myslide">
                         <img class="client-img" src="images/client1.jpg" alt="">
                         <p class="client-msg">
@@ -428,8 +435,8 @@
                     <source src="videos/contact.mp4" type="video/mp4">
                 </video>
                 <div class="contact-desc">
-                    <p class="seek"></p>
                     <h1>Get In Touch</h1>
+                    <p class="seek"></p>
                     <p class="contact-tagline"><span>Let's create something together.</span> Simply complete the quick
                         contact form below and I'll reply (usually within a day) to discuss your requirements.</p>
                     <p class="contact-tagline">I currently have good availability!</p>
@@ -462,6 +469,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/jquery.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 
