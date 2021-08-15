@@ -666,7 +666,7 @@ border-color: #000000;
       }
       #img{
           width: 100%;
-          height: fit-content;
+          height: 300px;
           /* object-fit: contain; */
       }
   }
