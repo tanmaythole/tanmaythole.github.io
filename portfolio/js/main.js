@@ -127,7 +127,7 @@ var modalInfo = {
     5: {
       title: "Portfolio",
       info: "...",
-      link: "#",
+      link: "https://tanmaythole.github.io/portfolio",
       github: "#"
     },
     6: {
@@ -147,6 +147,18 @@ var modalInfo = {
       info: "...",
       link: "#",
       github: "#"
+    },
+    9:{
+      title: "Kal Tak News",
+      info: "A News Aggregator Web App in ReactJs with NewsApi.org.",
+      link: "https://kal-tak-news.vercel.app",
+      github: "https://github.com/tanmaythole/Kal-Tak-News"
+    },
+    10:{
+      title: "Text Utils",
+      info: "TextUtils is a word counter and a character counting utility which can be used to manipulate your text in the way you want. You can remove punctuations, convert your text Uppercase.",
+      link: "https://text-utils-three.vercel.app",
+      github: "https://github.com/tanmaythole/TextUtils"
     }
   };
   
